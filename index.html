@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookshop System Presentation</title>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <!-- Icons (Lucide) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="csjs/styles.css">
+</head>
+
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo-box">
+          <i data-lucide="book-open" class="logo-icon"></i>
+        </div>
+        <div class="logo-text">
+          <h2>Bookshop Pro</h2>
+          <p>System Enterprise</p>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item" data-target="overview">
+          <i data-lucide="layout-dashboard"></i> Overview
+        </a>
+        <a href="#" class="nav-item active" data-target="slides">
+          <i data-lucide="presentation"></i> Slides
+        </a>
+        <a href="#" class="nav-item" data-target="reports">
+          <i data-lucide="bar-chart-2"></i> Reports
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="user-info">
+          <div class="avatar">
+            <i data-lucide="award"></i>
+          </div>
+          <div class="user-details">
+            <p class="name">Capstone Defense</p>
+            <p class="role">2026 Academic Panel</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Header -->
+      <header class="top-header">
+        <div class="header-left">
+          <h1 id="header-title">Interactive Presentation</h1>
+          <span class="badge">Live</span>
+        </div>
+        <div class="header-right">
+          <div class="timer" id="presentation-timer">
+            <i data-lucide="clock"></i> <span>00:00</span>
+          </div>
+          <button class="icon-btn theme-toggle">
+            <i data-lucide="moon"></i>
+          </button>
+        </div>
+      </header>
+      <!-- Content Area -->
+      <div class="content-area" id="content-area">
+
+        <!-- Overview View -->
+        <div id="overview-view" class="view-section">
+          <div class="overview-content">
+            
+            <!-- Premium Hero Section -->
+            <div class="overview-hero" style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(248, 250, 252, 0.8)); border-radius: 20px; padding: 3rem; margin-bottom: 3.5rem; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; gap: 2rem; position: relative; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.02);">
+              <div style="position: absolute; top: -50%; right: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(99,102,241,0.1) 0%, rgba(255,255,255,0) 70%); border-radius: 50%; pointer-events: none;"></div>
+              
+              <div class="hero-text" style="position: relative; z-index: 1;">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                  <span style="background: var(--accent-blue); color: #fff; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);">Case Study</span>
+                  <span style="color: var(--text-secondary); font-weight: 600; font-size: 1.05rem;"><i data-lucide="building-2" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-right: 0.25rem;"></i>Bright Multiservices and Tech Solutions</span>
+                </div>
+                <h2 style="font-size: 3.2rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1.25rem; line-height: 1.15; letter-spacing: -1px;">Bookshop System <br><span style="color: var(--accent-blue);">Enterprise Edition</span></h2>
+                <p style="font-size: 1.2rem; color: var(--text-secondary); line-height: 1.6; max-width: 650px;">A comprehensive, robust, and highly scalable digital infrastructure designed specifically to modernize book retail operations and elevate customer experience.</p>
+              </div>
+              
+              <div class="hero-graphic" style="flex-shrink: 0; position: relative; z-index: 1; display: none; @media(min-width: 900px) { display: block; }">
+                <div style="background: #ffffff; padding: 2.5rem; border-radius: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.08); border: 1px solid var(--border-color); text-align: center; width: 220px; position: relative;">
+                  <div style="width: 80px; height: 80px; background: rgba(99, 102, 241, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto;">
+                    <i data-lucide="book-open" style="width: 40px; height: 40px; color: var(--accent-blue);"></i>
+                  </div>
+                  <h4 style="font-size: 1.3rem; font-weight: 700; color: var(--text-primary);">System v2.0</h4>
+                  <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 0.75rem;">
+                    <span style="width: 8px; height: 8px; background: #10b981; border-radius: 50%; display: inline-block;"></span>
+                    <span style="color: var(--text-secondary); font-size: 0.9rem; font-weight: 500;">Status: Active</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Architecture Cards -->
+            <div class="overview-header" style="margin-bottom: 2rem;">
+              <h3 style="font-size: 1.8rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Core Architecture</h3>
+              <p style="color: var(--text-secondary); font-size: 1.1rem;">High-level look at the underlying technologies powering the platform.</p>
+            </div>
+            
+            <div class="dashboard-cards" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+              <div class="premium-card" style="background: #ffffff; border: 1px solid var(--border-color); border-top: 4px solid var(--accent-blue); padding: 2rem; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.02); transition: transform 0.2s, box-shadow 0.2s; cursor: default;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 30px rgba(0,0,0,0.06)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 10px rgba(0,0,0,0.02)'">
+                <div style="background: rgba(99, 102, 241, 0.1); width: 56px; height: 56px; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                  <i data-lucide="database" style="color: var(--accent-blue); width: 28px; height: 28px;"></i>
+                </div>
+                <h3 style="font-size: 1.4rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem;">PostgreSQL</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">Transactionally isolated enterprise database ensuring absolute data integrity.</p>
+              </div>
+              
+              <div class="premium-card" style="background: #ffffff; border: 1px solid var(--border-color); border-top: 4px solid #f59e0b; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.02); transition: transform 0.2s, box-shadow 0.2s; cursor: default;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 30px rgba(0,0,0,0.06)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 10px rgba(0,0,0,0.02)'">
+                <div style="background: rgba(245, 158, 11, 0.1); width: 56px; height: 56px; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                  <i data-lucide="server" style="color: #f59e0b; width: 28px; height: 28px;"></i>
+                </div>
+                <h3 style="font-size: 1.4rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem;">Node & Express</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">High-performance backend API routing and secure authentication layer.</p>
+              </div>
+              
+              <div class="premium-card" style="background: #ffffff; border: 1px solid var(--border-color); border-top: 4px solid #10b981; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.02); transition: transform 0.2s, box-shadow 0.2s; cursor: default;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 30px rgba(0,0,0,0.06)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 10px rgba(0,0,0,0.02)'">
+                <div style="background: rgba(16, 185, 129, 0.1); width: 56px; height: 56px; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                  <i data-lucide="monitor" style="color: #10b981; width: 28px; height: 28px;"></i>
+                </div>
+                <h3 style="font-size: 1.4rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem;">React & Next.js</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">Seamless, responsive, and dynamic user interfaces for POS and Storefront.</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <!-- Slides View -->
+        <div id="slides-view" class="view-section active">
+          <div class="slide-container" id="slide-container">
+            <!-- Slide content injected here by scripts.js -->
+          </div>
+        </div>
+        <!-- Reports View -->
+        <div id="reports-view" class="view-section">
+          <div class="reports-content">
+            <div class="overview-header dashboard-header">
+              <div>
+                <h2>Premium Analytics Dashboard</h2>
+                <p>Live financial insights, orders, and customer trends.</p>
+              </div>
+              <div class="dashboard-filters">
+                <select id="report-filter" class="glass-select">
+                  <option value="6months">Last 6 Months</option>
+                  <option value="1year">Last 1 Year</option>
+                  <option value="alltime">All Time</option>
+                </select>
+              </div>
+            </div>
+            
+            <!-- KPI Cards -->
+            <div class="kpi-cards">
+              <div class="kpi-card">
+                <div class="kpi-icon gold-glow"><i data-lucide="dollar-sign"></i></div>
+                <div class="kpi-info">
+                  <p>Total Revenue</p>
+                  <h3 id="kpi-revenue" class="animated-number">$124,500</h3>
+                </div>
+              </div>
+              <div class="kpi-card">
+                <div class="kpi-icon blue-glow"><i data-lucide="shopping-cart"></i></div>
+                <div class="kpi-info">
+                  <p>Total Orders</p>
+                  <h3 id="kpi-orders" class="animated-number">3,450</h3>
+                </div>
+              </div>
+              <div class="kpi-card">
+                <div class="kpi-icon green-glow"><i data-lucide="users"></i></div>
+                <div class="kpi-info">
+                  <p>New Customers</p>
+                  <h3 id="kpi-customers" class="animated-number">1,280</h3>
+                </div>
+              </div>
+            </div>
+
+            <!-- Charts Grid -->
+            <div class="charts-grid">
+              <div class="chart-box main-chart">
+                <h4>Sales Trend</h4>
+                <div class="chart-wrapper">
+                  <canvas id="salesLineChart"></canvas>
+                </div>
+              </div>
+              <div class="chart-box side-chart">
+                <h4>Top Selling Categories</h4>
+                <div class="chart-wrapper doughnut-wrapper">
+                  <canvas id="categoryDoughnutChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- Footer (Slide Controls) -->
+      <footer class="bottom-footer" id="slide-controls">
+        <div class="progress-container">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <div class="controls-wrapper">
+          <button class="control-btn" id="prev-btn">
+            <i data-lucide="chevron-left"></i> Previous
+          </button>
+          <div class="slide-indicator">
+            Slide <span id="current-slide">1</span> of <span id="total-slides">10</span>
+          </div>
+          <button class="control-btn primary-btn" id="next-btn">
+            Next <i data-lucide="chevron-right"></i>
+          </button>
+        </div>
+      </footer>
+    </main>
+  </div>
+  
+  <!-- Presenter Tools -->
+  <div id="laser-pointer" class="laser-pointer"></div>
+  
+  <div id="minimap-container" class="minimap-container">
+    <div class="minimap-toggle" id="minimap-toggle">
+      <i data-lucide="grid"></i> <span>Minimap</span>
+    </div>
+    <div class="minimap-track" id="minimap-track">
+      <!-- Minimap items injected via JS -->
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="csjs/scripts.js"></script>
+</body>
+
+</html>
