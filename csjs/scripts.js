@@ -74,7 +74,7 @@ const SLIDES = [
         title: "Requirements became an implemented web application",
         subtitle: "Observation, interviews and document review grounded the design in the company’s real workflow.",
         html: `
-        <div class="workflow-track" style="margin-bottom: 2rem;">
+        <div class="workflow-track" style="margin-bottom: 3.5rem;">
             <div class="workflow-line"></div>
             <div class="workflow-node active" style="border-color: var(--accent-blue);"><i data-lucide="search" style="color: var(--accent-blue);"></i><span class="workflow-label">1. Analyze</span></div>
             <div class="workflow-node active" style="border-color: var(--accent-gold);"><i data-lucide="pen-tool" style="color: var(--accent-gold);"></i><span class="workflow-label">2. Design</span></div>
@@ -100,7 +100,7 @@ const SLIDES = [
             <div class="workflow-node" id="sim-step-3"><i data-lucide="package"></i><span class="workflow-label">3. Inventory</span></div>
             <div class="workflow-node" id="sim-step-4"><i data-lucide="truck"></i><span class="workflow-label">4. Delivery</span></div>
         </div>
-        <div style="text-align: center; margin-top: 1rem;">
+        <div style="text-align: center; margin-top: 4rem;">
             <p style="font-size: 1rem; color: var(--text-secondary); margin-bottom: 1rem;">Every step automatically refreshes reports.</p>
             <button id="simulate-btn" class="sim-btn"><i data-lucide="play"></i> Simulate Workflow</button>
         </div>
