@@ -1,131 +1,172 @@
-// Premium 10-Slide Content restored for Light Theme
 const SLIDES = [
     {
-        eyebrow: "Slide 1: Capstone Defense 2026",
-        title: "Bookshop Pro System",
-        subtitle: "Seamless Automation from Bookshelves to Customer Doorstep. A comprehensive, premium Bookshop Sales and Inventory Management System.",
+        eyebrow: "THESIS PRESENTATION",
+        title: "Bookshop System",
+        subtitle: "A centralized platform for BrightMTS operations. Case Study: Bright Multiservices and Tech Solutions. From operational problem to implemented and tested solution.",
         html: `<div class="feature-grid" style="grid-template-columns: 1fr; text-align: center;">
                   <div class="feature-card" style="border-top: 4px solid var(--accent-blue);">
                       <div class="feature-icon" style="transform: scale(1.2); margin-bottom: 2rem;">
                           <i data-lucide="book-open" style="width: 48px; height: 48px;"></i>
                       </div>
                       <h3 style="font-size: 2rem; margin-bottom: 1rem;">Welcome Panel Evaluators</h3>
-                      <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Modernizing book retail, streamlining backend operations, and revolutionizing how readers discover books.</p>
+                      <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Case Study: Bright Multiservices and Tech Solutions</p>
                   </div>
                </div>`
     },
     {
-        eyebrow: "Slide 2: The Core Problem",
-        title: "The Bottleneck of Traditional Book Retail",
-        subtitle: "Historically, managing a bookstore meant relying on manual, paper-based systems or disconnected software.",
+        eyebrow: "01 / STUDY BACKGROUND",
+        title: "BrightMTS needed one system for a growing operation",
+        subtitle: "The company distributes Magic Pearls and Kokos AI learning series from Waberi District, Mogadishu. Serving schools, institutions, organizations, bookstores and individual customers.",
+        html: `<div class="feature-grid" style="grid-template-columns: repeat(3, 1fr);">
+                  <div class="feature-card"><div class="feature-icon"><i data-lucide="trending-up"></i></div><h3>More Activity</h3><p>Products, customers and daily transactions continued to increase.</p></div>
+                  <div class="feature-card"><div class="feature-icon"><i data-lucide="share-2"></i></div><h3>More Coordination</h3><p>Sales, inventory, payments and delivery needed shared information.</p></div>
+                  <div class="feature-card" style="border-top: 4px solid var(--accent-blue);"><div class="feature-icon" style="color: var(--accent-blue); background: rgba(99, 102, 241, 0.1);"><i data-lucide="target"></i></div><h3>Research Need</h3><p>A web-based system that integrates the company’s main business processes and supports accurate decisions.</p></div>
+               </div>`
+    },
+    {
+        eyebrow: "02 / PROBLEM STATEMENT",
+        title: "Manual records created errors, delays and limited visibility",
+        subtitle: "Information was distributed across handwritten records and separate Microsoft Office files.",
+        html: `<div class="feature-grid" style="grid-template-columns: repeat(2, 1fr);">
+                  <div class="feature-card"><div class="feature-icon" style="color: #ef4444; background: rgba(239, 68, 68, 0.1);"><i data-lucide="package-x"></i></div><h3>1. Inventory</h3><p>Stock levels and movements were difficult to monitor accurately.</p></div>
+                  <div class="feature-card"><div class="feature-icon" style="color: #ef4444; background: rgba(239, 68, 68, 0.1);"><i data-lucide="file-x"></i></div><h3>2. Transactions</h3><p>Manual recording increased duplication and calculation errors.</p></div>
+                  <div class="feature-card"><div class="feature-icon" style="color: #f59e0b; background: rgba(245, 158, 11, 0.1);"><i data-lucide="users"></i></div><h3>3. Customer Service</h3><p>Physical and online orders were harder to process and follow.</p></div>
+                  <div class="feature-card"><div class="feature-icon" style="color: #f59e0b; background: rgba(245, 158, 11, 0.1);"><i data-lucide="pie-chart"></i></div><h3>4. Management</h3><p>Reports were delayed, limiting timely decision-making.</p></div>
+               </div>`
+    },
+    {
+        eyebrow: "03 / RESEARCH OBJECTIVES",
+        title: "The study linked system development, validation and reporting",
+        subtitle: "GENERAL OBJECTIVE: Design and develop a web-based Bookshop System that improves inventory management, automates sales operations and supports efficient business decision-making.",
+        html: `<div class="feature-grid" style="grid-template-columns: repeat(3, 1fr);">
+                  <div class="feature-card" style="border-top: 4px solid var(--accent-blue);"><div class="feature-icon" style="color: var(--accent-blue);"><i data-lucide="code"></i></div><h3>1. Implement Core Modules</h3><p>Inventory control, sales processing, online ordering and role-based access control.</p></div>
+                  <div class="feature-card" style="border-top: 4px solid var(--accent-gold);"><div class="feature-icon" style="color: var(--accent-gold);"><i data-lucide="check-circle"></i></div><h3>2. Validate the System</h3><p>Evaluate functionality, usability, security and overall performance.</p></div>
+                  <div class="feature-card" style="border-top: 4px solid var(--accent-green);"><div class="feature-icon" style="color: var(--accent-green);"><i data-lucide="bar-chart"></i></div><h3>3. Generate Reports</h3><p>Report inventory, sales, customers, payments, deliveries and business performance.</p></div>
+               </div>`
+    },
+    {
+        eyebrow: "04 / CONTENT SCOPE",
+        title: "The system covers the complete operating cycle",
+        subtitle: "The project combined internal administration, customer ordering and management reporting.",
+        html: `<div class="feature-grid" style="grid-template-columns: repeat(3, 1fr);">
+                  <div class="feature-card"><div class="feature-icon"><i data-lucide="library"></i></div><h3>Catalog</h3><p>Products, categories, brands and variants</p></div>
+                  <div class="feature-card"><div class="feature-icon"><i data-lucide="archive"></i></div><h3>Stock</h3><p>Warehouses, inventory and stock movements</p></div>
+                  <div class="feature-card"><div class="feature-icon"><i data-lucide="shopping-cart"></i></div><h3>Commerce</h3><p>POS, sales, online orders and payments</p></div>
+                  <div class="feature-card"><div class="feature-icon"><i data-lucide="users"></i></div><h3>Relationships</h3><p>Customers and sponsors</p></div>
+                  <div class="feature-card"><div class="feature-icon"><i data-lucide="truck"></i></div><h3>Fulfilment</h3><p>Delivery assignments, confirmations and incidents</p></div>
+                  <div class="feature-card"><div class="feature-icon"><i data-lucide="shield"></i></div><h3>Control</h3><p>Users, roles, notifications, settings and reports</p></div>
+               </div>`
+    },
+    {
+        eyebrow: "05 / SIGNIFICANCE",
+        title: "The system creates value for operations, customers and research",
+        subtitle: "Each stakeholder benefits from the same centralized and current information.",
         html: `<ul class="bullet-list">
-                 <li><i data-lucide="x-octagon" style="color: #ef4444;"></i> <strong>Disjointed Systems:</strong> POS, Book Inventory, and Delivery functioning in silos.</li>
-                 <li><i data-lucide="alert-triangle" style="color: #f59e0b;"></i> <strong>Manual Tracking:</strong> High margin for human error in tracking titles, authors, and stock.</li>
-                 <li><i data-lucide="wifi-off" style="color: #ef4444;"></i> <strong>Poor Customer Reach:</strong> Limited to physical walk-ins; lack of integrated online ordering.</li>
+                 <li><i data-lucide="briefcase" style="color: var(--accent-blue);"></i> <strong>Company:</strong> Less manual work, improved inventory accuracy and reliable operational information.</li>
+                 <li><i data-lucide="users" style="color: var(--accent-blue);"></i> <strong>Employees:</strong> Simpler daily tasks with fewer repeated entries and fewer avoidable errors.</li>
+                 <li><i data-lucide="shopping-bag" style="color: var(--accent-blue);"></i> <strong>Customers:</strong> Clear product availability, online ordering and more organized fulfilment.</li>
+                 <li><i data-lucide="pie-chart" style="color: var(--accent-blue);"></i> <strong>Management:</strong> Current dashboards and reports for monitoring and decisions.</li>
+                 <li><i data-lucide="graduation-cap" style="color: var(--accent-blue);"></i> <strong>Students & Researchers:</strong> A practical reference for web systems and business process automation.</li>
                </ul>`
     },
     {
-        eyebrow: "Slide 3: The Need",
-        title: "The Demand for Intelligent Automation",
-        subtitle: "To survive in today's fast-paced market, a modern bookshop requires intelligent automation.",
-        html: `<div class="feature-grid">
-                  <div class="feature-card"><div class="feature-icon"><i data-lucide="activity"></i></div><h3>Real-time Data</h3><p>Instant visibility into available titles and sales performance.</p></div>
-                  <div class="feature-card"><div class="feature-icon"><i data-lucide="smartphone"></i></div><h3>Omnichannel</h3><p>Readers expect to buy books in-store and online interchangeably.</p></div>
-                  <div class="feature-card"><div class="feature-icon"><i data-lucide="bar-chart-2"></i></div><h3>Data-Driven</h3><p>Management requires actionable insights to know which genres are trending.</p></div>
-               </div>`
+        eyebrow: "06 / DEVELOPMENT APPROACH",
+        title: "Requirements became an implemented web application",
+        subtitle: "Observation, interviews and document review grounded the design in the company’s real workflow.",
+        html: `
+        <div class="workflow-track" style="margin-bottom: 2rem;">
+            <div class="workflow-line"></div>
+            <div class="workflow-node active" style="border-color: var(--accent-blue);"><i data-lucide="search" style="color: var(--accent-blue);"></i><span class="workflow-label">1. Analyze</span></div>
+            <div class="workflow-node active" style="border-color: var(--accent-gold);"><i data-lucide="pen-tool" style="color: var(--accent-gold);"></i><span class="workflow-label">2. Design</span></div>
+            <div class="workflow-node active" style="border-color: var(--accent-green);"><i data-lucide="code" style="color: var(--accent-green);"></i><span class="workflow-label">3. Develop</span></div>
+            <div class="workflow-node active" style="border-color: #8b5cf6;"><i data-lucide="check-square" style="color: #8b5cf6;"></i><span class="workflow-label">4. Test</span></div>
+        </div>
+        <div class="feature-grid" style="grid-template-columns: repeat(4, 1fr);">
+            <div class="feature-card" style="padding: 1.5rem;"><h4 style="font-weight:700; margin-bottom: 0.5rem; color: var(--accent-blue);">Frontend</h4><p style="font-size: 0.9rem;">Next.js + TypeScript<br>Tailwind + shadcn/ui</p></div>
+            <div class="feature-card" style="padding: 1.5rem;"><h4 style="font-weight:700; margin-bottom: 0.5rem; color: var(--accent-gold);">Backend</h4><p style="font-size: 0.9rem;">Node.js + Express</p></div>
+            <div class="feature-card" style="padding: 1.5rem;"><h4 style="font-weight:700; margin-bottom: 0.5rem; color: var(--accent-green);">Database</h4><p style="font-size: 0.9rem;">PostgreSQL + Prisma</p></div>
+            <div class="feature-card" style="padding: 1.5rem;"><h4 style="font-weight:700; margin-bottom: 0.5rem; color: #8b5cf6;">Design</h4><p style="font-size: 0.9rem;">Responsive UI</p></div>
+        </div>`
     },
     {
-        eyebrow: "Slide 4: The Solution",
-        title: "Our Unified Bookshop Platform",
-        subtitle: "We have engineered a centralized hub that automates complex workflows.",
-        html: `<div class="feature-grid">
-                  <div class="feature-card" style="border-top: 4px solid var(--accent-blue);"><div class="feature-icon"><i data-lucide="layers"></i></div><h3>Centralized Control</h3><p>One platform managing book inventory, POS, and the online bookstore.</p></div>
-                  <div class="feature-card" style="border-top: 4px solid var(--accent-gold);"><div class="feature-icon" style="color: var(--accent-gold); background: rgba(245, 158, 11, 0.1);"><i data-lucide="zap"></i></div><h3>Seamless Automation</h3><p>Automated stock deductions, order tracking, and low-stock alerts.</p></div>
-                  <div class="feature-card" style="border-top: 4px solid var(--accent-green);"><div class="feature-icon" style="color: var(--accent-green); background: rgba(16, 185, 129, 0.1);"><i data-lucide="trending-up"></i></div><h3>Scalable Architecture</h3><p>Built to grow with the business and handle thousands of titles.</p></div>
-               </div>`
-    },
-    {
-        eyebrow: "Slide 5: Customer Journey",
-        title: "Revolutionizing Online Book Delivery",
-        subtitle: "The most drastic change is how readers interact with the bookshop. From blind waiting to real-time tracking.",
-        html: `<div class="split-screen">
-                  <div class="split-card before">
-                      <h3><i data-lucide="frown"></i> The Legacy Way</h3>
-                      <ul class="bullet-list" style="margin-top: 1rem; gap: 1rem; box-shadow: none;">
-                          <li style="border: none; padding: 0; box-shadow: none;"><i data-lucide="phone-call" style="color: #ef4444;"></i> <strong>Phone Calls:</strong> High risk of miscommunication.</li>
-                          <li style="border: none; padding: 0; box-shadow: none;"><i data-lucide="eye-off" style="color: #ef4444;"></i> <strong>Blind Delivery:</strong> Customers wait without knowing order status.</li>
-                      </ul>
-                  </div>
-                  <div class="split-card after">
-                      <h3><i data-lucide="smile"></i> The Unified Way</h3>
-                      <ul class="bullet-list" style="margin-top: 1rem; gap: 1rem; box-shadow: none;">
-                          <li style="border: none; padding: 0; box-shadow: none;"><i data-lucide="shopping-bag" style="color: #10b981;"></i> <strong>Self-Service:</strong> Beautiful online store for browsing.</li>
-                          <li style="border: none; padding: 0; box-shadow: none;"><i data-lucide="truck" style="color: #10b981;"></i> <strong>Live Tracking:</strong> Real-time automated status updates.</li>
-                      </ul>
-                  </div>
-               </div>`
-    },
-    {
-        eyebrow: "Slide 6: Simulator",
-        title: "An Elegant, Automated Workflow",
-        subtitle: "Let's walk through the end-to-end automation from order placement to final delivery.",
+        eyebrow: "07 / IMPLEMENTED WORKFLOW",
+        title: "One transaction updates every related activity",
+        subtitle: "The system supports both walk-in sales and online orders through a shared database.",
         html: `
         <div class="workflow-track">
             <div class="workflow-line"></div>
             <div class="workflow-node" id="sim-step-1"><i data-lucide="shopping-cart"></i><span class="workflow-label">1. Order</span></div>
-            <div class="workflow-node" id="sim-step-2"><i data-lucide="refresh-cw"></i><span class="workflow-label">2. Sync</span></div>
-            <div class="workflow-node" id="sim-step-3"><i data-lucide="package"></i><span class="workflow-label">3. Fulfill</span></div>
-            <div class="workflow-node" id="sim-step-4"><i data-lucide="check-circle"></i><span class="workflow-label">4. Complete</span></div>
+            <div class="workflow-node" id="sim-step-2"><i data-lucide="credit-card"></i><span class="workflow-label">2. Payment</span></div>
+            <div class="workflow-node" id="sim-step-3"><i data-lucide="package"></i><span class="workflow-label">3. Inventory</span></div>
+            <div class="workflow-node" id="sim-step-4"><i data-lucide="truck"></i><span class="workflow-label">4. Delivery</span></div>
         </div>
-        <div style="text-align: center;">
-            <button id="simulate-btn" class="sim-btn"><i data-lucide="play"></i> Simulate New Order</button>
+        <div style="text-align: center; margin-top: 1rem;">
+            <p style="font-size: 1rem; color: var(--text-secondary); margin-bottom: 1rem;">Every step automatically refreshes reports.</p>
+            <button id="simulate-btn" class="sim-btn"><i data-lucide="play"></i> Simulate Workflow</button>
         </div>
         `
     },
     {
-        eyebrow: "Slide 7: Core Features",
-        title: "A Feature-Rich Ecosystem",
-        subtitle: "Four main modules built for cashiers, warehouse managers, readers, and administrators.",
+        eyebrow: "08 / IMPLEMENTATION RESULTS",
+        title: "All planned modules were completed and integrated",
+        subtitle: "Chapter Six confirms that the major functional modules operated successfully.",
         html: `<div class="feature-grid" style="grid-template-columns: repeat(2, 1fr);">
-                  <div class="feature-card"><div class="feature-icon"><i data-lucide="monitor"></i></div><h3>Advanced POS</h3><p>Lightning-fast in-store checkout for walk-in readers.</p></div>
-                  <div class="feature-card"><div class="feature-icon"><i data-lucide="box"></i></div><h3>Inventory Control</h3><p>Smart adjustments, supplier management, and damaged book tracking.</p></div>
-                  <div class="feature-card"><div class="feature-icon"><i data-lucide="pie-chart"></i></div><h3>Executive Dashboard</h3><p>High-level charts, sales reports, and top-selling books tracking.</p></div>
-                  <div class="feature-card"><div class="feature-icon"><i data-lucide="globe"></i></div><h3>Integrated Online Store</h3><p>A beautiful storefront optimized for browsing books online.</p></div>
+                  <div class="feature-card" style="border-left: 4px solid var(--accent-green);"><div class="feature-icon" style="color: var(--accent-green); background: rgba(16,185,129,0.1);"><i data-lucide="shield-check"></i></div><h3>Auth & Users</h3><p>Completed and integrated with shared operational data.</p></div>
+                  <div class="feature-card" style="border-left: 4px solid var(--accent-green);"><div class="feature-icon" style="color: var(--accent-green); background: rgba(16,185,129,0.1);"><i data-lucide="database"></i></div><h3>Catalog & Inventory</h3><p>Completed and integrated with shared operational data.</p></div>
+                  <div class="feature-card" style="border-left: 4px solid var(--accent-green);"><div class="feature-icon" style="color: var(--accent-green); background: rgba(16,185,129,0.1);"><i data-lucide="shopping-cart"></i></div><h3>Sales, POS & Orders</h3><p>Completed and integrated with shared operational data.</p></div>
+                  <div class="feature-card" style="border-left: 4px solid var(--accent-green);"><div class="feature-icon" style="color: var(--accent-green); background: rgba(16,185,129,0.1);"><i data-lucide="truck"></i></div><h3>Delivery & Reports</h3><p>Completed and integrated with shared operational data.</p></div>
                </div>`
     },
     {
-        eyebrow: "Slide 8: Architecture",
-        title: "Built for Speed, Security, and Scale",
-        subtitle: "For the technical panel: Quality, security, and response times were our top priorities.",
-        html: `<ul class="bullet-list">
-                 <li><i data-lucide="code"></i> <strong>Modern Web Technologies:</strong> React, Next.js, and Express ensuring a fast, responsive UI.</li>
-                 <li><i data-lucide="database"></i> <strong>Secure API & Database:</strong> PostgreSQL protecting business data and customer information.</li>
-                 <li><i data-lucide="shield-check"></i> <strong>Role-Based Access:</strong> Strict permissions ensuring staff only see what they are authorized to see.</li>
+        eyebrow: "09 / EVALUATION RESULTS",
+        title: "Testing confirmed performance, accuracy and security",
+        subtitle: "The documented Chapter Six metrics met every defined target.",
+        html: `<div style="overflow-x: auto; background: #fff; border-radius: 12px; border: 1px solid var(--border-color); box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                 <table style="width: 100%; text-align: left; border-collapse: collapse;">
+                   <thead>
+                     <tr style="background: rgba(99, 102, 241, 0.05); border-bottom: 1px solid var(--border-color);">
+                       <th style="padding: 1rem; font-weight: 600; color: var(--text-primary);">Metric</th>
+                       <th style="padding: 1rem; font-weight: 600; color: var(--text-primary);">Target</th>
+                       <th style="padding: 1rem; font-weight: 600; color: var(--text-primary);">Result</th>
+                       <th style="padding: 1rem; font-weight: 600; color: var(--text-primary);">Status</th>
+                     </tr>
+                   </thead>
+                   <tbody>
+                     <tr style="border-bottom: 1px solid var(--border-color);"><td style="padding: 1rem;">Login response</td><td style="padding: 1rem;">≤ 2 seconds</td><td style="padding: 1rem;">1.3 seconds</td><td style="padding: 1rem; color: var(--accent-green); font-weight: 600;"><i data-lucide="check-circle" style="width: 16px; height: 16px; display: inline; vertical-align: text-bottom;"></i> Achieved</td></tr>
+                     <tr style="border-bottom: 1px solid var(--border-color);"><td style="padding: 1rem;">Dashboard loading</td><td style="padding: 1rem;">≤ 3 seconds</td><td style="padding: 1rem;">2.1 seconds</td><td style="padding: 1rem; color: var(--accent-green); font-weight: 600;"><i data-lucide="check-circle" style="width: 16px; height: 16px; display: inline; vertical-align: text-bottom;"></i> Achieved</td></tr>
+                     <tr style="border-bottom: 1px solid var(--border-color);"><td style="padding: 1rem;">Inventory accuracy</td><td style="padding: 1rem;">100%</td><td style="padding: 1rem;">100%</td><td style="padding: 1rem; color: var(--accent-green); font-weight: 600;"><i data-lucide="check-circle" style="width: 16px; height: 16px; display: inline; vertical-align: text-bottom;"></i> Achieved</td></tr>
+                     <tr style="border-bottom: 1px solid var(--border-color);"><td style="padding: 1rem;">Sales accuracy</td><td style="padding: 1rem;">100%</td><td style="padding: 1rem;">100%</td><td style="padding: 1rem; color: var(--accent-green); font-weight: 600;"><i data-lucide="check-circle" style="width: 16px; height: 16px; display: inline; vertical-align: text-bottom;"></i> Achieved</td></tr>
+                     <tr><td style="padding: 1rem;">Report generation</td><td style="padding: 1rem;">≤ 5 seconds</td><td style="padding: 1rem;">2.8 seconds</td><td style="padding: 1rem; color: var(--accent-green); font-weight: 600;"><i data-lucide="check-circle" style="width: 16px; height: 16px; display: inline; vertical-align: text-bottom;"></i> Achieved</td></tr>
+                   </tbody>
+                 </table>
+               </div>`
+    },
+    {
+        eyebrow: "10 / PROBLEMS ADDRESSED",
+        title: "Manual problems and implemented responses",
+        subtitle: "Every major weakness identified in Chapter One received a corresponding system function.",
+        html: `<ul class="bullet-list" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                 <li><i data-lucide="arrow-right-circle" style="color: var(--accent-blue);"></i> <strong>Manual Products:</strong> Centralized catalog database</li>
+                 <li><i data-lucide="arrow-right-circle" style="color: var(--accent-blue);"></i> <strong>Manual Stock:</strong> Automatic inventory updates</li>
+                 <li><i data-lucide="arrow-right-circle" style="color: var(--accent-blue);"></i> <strong>Paper Sales:</strong> POS & automated recording</li>
+                 <li><i data-lucide="arrow-right-circle" style="color: var(--accent-blue);"></i> <strong>No Online:</strong> Customer-facing web store</li>
+                 <li><i data-lucide="arrow-right-circle" style="color: var(--accent-blue);"></i> <strong>Delivery Follow-up:</strong> Assignment & status workflow</li>
+                 <li><i data-lucide="arrow-right-circle" style="color: var(--accent-blue);"></i> <strong>Delayed Reports:</strong> Current operational dashboards</li>
                </ul>`
     },
     {
-        eyebrow: "Slide 9: Business Impact",
-        title: "Driving Efficiency & Growth",
-        subtitle: "The ultimate goal: eliminating human error, cutting processing time, and providing financial visibility.",
-        html: `<div class="feature-grid" style="grid-template-columns: repeat(2, 1fr);">
-                  <div class="metric-container" style="border-top: 4px solid var(--accent-gold);">
-                      <div class="metric-value" style="color: var(--accent-gold);">30%</div>
-                      <div class="metric-label">Time Saved Processing Orders</div>
-                  </div>
-                  <div class="metric-container" style="border-top: 4px solid var(--accent-green);">
-                      <div class="metric-value" style="color: var(--accent-green);">0%</div>
-                      <div class="metric-label">Manual Data Entry Errors</div>
-                  </div>
-               </div>`
-    },
-    {
-        eyebrow: "Slide 10: Conclusion",
-        title: "Ready for the Future of Book Retail",
-        subtitle: "We haven't just digitized a process; we have built a premium foundation for bookshop success.",
-        html: `<div style="text-align: center; margin-top: 5rem;">
-                  <i data-lucide="award" style="width: 100px; height: 100px; color: var(--accent-gold); margin-bottom: 2rem;"></i>
-                  <h2 style="font-size: 2.5rem; font-weight: 700; color: var(--text-primary);">Thank You.</h2>
-                  <p style="font-size: 1.2rem; color: var(--text-secondary); margin-top: 1rem;">We welcome your questions.</p>
+        eyebrow: "11 / CONCLUSION",
+        title: "The project achieved its research purpose",
+        subtitle: "BrightMTS now has a tested foundation for centralized digital operations.",
+        html: `<div class="feature-grid">
+                  <div class="feature-card" style="border-top: 4px solid var(--accent-blue);"><div class="feature-icon" style="color: var(--accent-blue); background: rgba(99,102,241,0.1);"><i data-lucide="layers"></i></div><h3>Centralized</h3><p>Products, stock, customers, sales, orders, payments and delivery</p></div>
+                  <div class="feature-card" style="border-top: 4px solid var(--accent-gold);"><div class="feature-icon" style="color: var(--accent-gold); background: rgba(245,158,11,0.1);"><i data-lucide="zap"></i></div><h3>Automated</h3><p>Inventory updates, notifications and operational reporting</p></div>
+                  <div class="feature-card" style="border-top: 4px solid var(--accent-green);"><div class="feature-icon" style="color: var(--accent-green); background: rgba(16,185,129,0.1);"><i data-lucide="shield-check"></i></div><h3>Validated</h3><p>Unit, integration, system and user acceptance testing</p></div>
+                  <div class="feature-card" style="border-top: 4px solid #8b5cf6;"><div class="feature-icon" style="color: #8b5cf6; background: rgba(139,92,246,0.1);"><i data-lucide="pie-chart"></i></div><h3>Decision Support</h3><p>Current dashboards and reports for authorized users</p></div>
+               </div>
+               <div style="text-align: center; margin-top: 3rem;">
+                  <h2 style="font-size: 2.5rem; font-weight: 700; color: var(--text-primary);">Thank You</h2>
+                  <p style="font-size: 1.2rem; color: var(--text-secondary); margin-top: 0.5rem;">Questions and Discussion</p>
                </div>`
     }
 ];
@@ -164,8 +205,8 @@ function renderSlide(index) {
   // Update Icons
   lucide.createIcons();
 
-  // Attach Simulator Logic if on Slide 6
-  if (index === 5) {
+  // Attach Simulator Logic if on Slide 8 (07 / IMPLEMENTED WORKFLOW)
+  if (index === 7) {
     setupSimulator();
   }
 
