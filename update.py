@@ -1,4 +1,17 @@
-const SLIDES = [
+import sys
+import re
+
+def modify_file():
+    with open('d:/graduation/presentation/csjs/scripts.js', 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    app_logic_index = content.find('// App Logic')
+    
+    if app_logic_index == -1:
+        print('Could not find // App Logic')
+        return
+        
+    slides_content = """const SLIDES = [
     {
         eyebrow: "SLIDE 1 — TITLE",
         title: "ONLINE BOOKSHOP SYSTEM",
@@ -286,237 +299,14 @@ const SLIDES = [
     }
 ];
 
-// App Logic
-let currentSlideIndex = 0;
-const totalSlides = SLIDES.length;
-
-const slideContainer = document.getElementById('slide-container');
-const prevBtn = document.getElementById('prev-btn');
-const nextBtn = document.getElementById('next-btn');
-const currentSlideEl = document.getElementById('current-slide');
-const totalSlidesEl = document.getElementById('total-slides');
-const progressBar = document.getElementById('progress-bar');
-const slideControls = document.getElementById('slide-controls');
-const headerTitle = document.getElementById('header-title');
-
-totalSlidesEl.textContent = totalSlides;
-
-function renderSlide(index) {
-  const slide = SLIDES[index];
-
-  // Update Header
-  headerTitle.textContent = slide.eyebrow.split(':')[0]; // e.g. "Slide 1"
-
-  // Inject Slide Content
-  slideContainer.innerHTML = `
-        <div class="slide-content">
-            <div class="slide-eyebrow">${slide.eyebrow}</div>
-            <h1 class="slide-title">${slide.title}</h1>
-            <p class="slide-subtitle">${slide.subtitle}</p>
-            <div class="slide-html-content">${slide.html}</div>
-        </div>
-    `;
-
-  // Update Icons
-  lucide.createIcons();
-
-  // Update Footer Controls
-  currentSlideEl.textContent = index + 1;
-  progressBar.style.width = `${((index + 1) / totalSlides) * 100}%`;
-
-  prevBtn.disabled = index === 0;
-
-  if (index === totalSlides - 1) {
-    nextBtn.innerHTML = 'Finish <i data-lucide="check"></i>';
-    nextBtn.classList.remove('primary-btn');
-    nextBtn.style.background = 'var(--accent-green)';
-    nextBtn.style.color = 'white';
-    nextBtn.style.border = 'none';
-  } else {
-    nextBtn.innerHTML = 'Next <i data-lucide="chevron-right"></i>';
-    nextBtn.classList.add('primary-btn');
-    nextBtn.style.background = '';
-  }
-  lucide.createIcons();
-}
-
-// Event Listeners for Controls
-prevBtn.addEventListener('click', () => {
-  if (currentSlideIndex > 0) {
-    currentSlideIndex--;
-    renderSlide(currentSlideIndex);
-  }
-});
-
-nextBtn.addEventListener('click', () => {
-  if (currentSlideIndex < totalSlides - 1) {
-    currentSlideIndex++;
-    renderSlide(currentSlideIndex);
-  }
-});
-
-// Keyboard Navigation
-document.addEventListener('keydown', (e) => {
-  if (!document.getElementById('slides-view').classList.contains('active')) return;
-
-  if (e.key === 'ArrowRight' || e.key === 'Space') {
-    nextBtn.click();
-  } else if (e.key === 'ArrowLeft') {
-    prevBtn.click();
-  }
-});
-
-// Sidebar Navigation Logic
-const navItems = document.querySelectorAll('.nav-item');
-const views = document.querySelectorAll('.view-section');
-
-navItems.forEach(item => {
-  item.addEventListener('click', (e) => {
-    e.preventDefault();
-    const target = e.currentTarget.getAttribute('data-target');
-
-    // Update active nav state
-    navItems.forEach(nav => nav.classList.remove('active'));
-    e.currentTarget.classList.add('active');
-
-    // Update view sections
-    views.forEach(view => {
-      view.classList.remove('active');
-      view.style.display = 'none';
-    });
-
-    const activeView = document.getElementById(`${target}-view`);
-    if (activeView) {
-        activeView.style.display = 'block';
-        // Force reflow for animation
-        void activeView.offsetWidth;
-        activeView.classList.add('active');
-    }
-
-    // Update Header Title and slide controls
-    if (target === 'slides') {
-      slideControls.style.display = 'flex';
-      renderSlide(currentSlideIndex);
-    } else {
-      slideControls.style.display = 'none';
-      headerTitle.textContent = target === 'overview' ? 'System Overview' : 'Premium Analytics Dashboard';
-    }
-
-    // Render chart if reports selected
-    if (target === 'reports') renderChart();
-  });
-});
-
-// Timer Logic
-let seconds = 0;
-setInterval(() => {
-  seconds++;
-  const mins = Math.floor(seconds / 60).toString().padStart(2, '0');
-  const secs = (seconds % 60).toString().padStart(2, '0');
-  const timerSpan = document.querySelector('#presentation-timer span');
-  if (timerSpan) timerSpan.textContent = `${mins}:${secs}`;
-}, 1000);
-
-// Initialize First Slide on Load
-renderSlide(0);
-
-// Premium Dashboard Chart Rendering
-let lineChart, doughnutChart;
-function renderChart() {
-  if (typeof Chart === 'undefined') return;
-
-  Chart.defaults.color = '#64748b';
-  Chart.defaults.font.family = 'Inter';
-  Chart.defaults.plugins.tooltip.backgroundColor = '#1e293b';
-  Chart.defaults.plugins.tooltip.padding = 12;
-  Chart.defaults.plugins.tooltip.borderColor = '#e2e8f0';
-  Chart.defaults.plugins.tooltip.borderWidth = 1;
-
-  const ctxLine = document.getElementById('salesLineChart')?.getContext('2d');
-  const ctxDoughnut = document.getElementById('categoryDoughnutChart')?.getContext('2d');
-  
-  if (!ctxLine || !ctxDoughnut) return;
-
-  if (lineChart) lineChart.destroy();
-  if (doughnutChart) doughnutChart.destroy();
-
-  // Line Chart
-  lineChart = new Chart(ctxLine, {
-    type: 'line',
-    data: {
-      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-      datasets: [
-        {
-          label: 'Revenue',
-          data: [12000, 19000, 15000, 22000, 28000, 34000],
-          borderColor: '#6366f1',
-          backgroundColor: 'rgba(99, 102, 241, 0.1)',
-          borderWidth: 3,
-          fill: true,
-          tension: 0.4,
-          pointBackgroundColor: '#fff',
-          pointBorderColor: '#6366f1',
-          pointRadius: 4,
-          pointHoverRadius: 6
-        }
-      ]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      plugins: { legend: { display: false } },
-      scales: {
-        y: { grid: { color: 'rgba(0,0,0,0.05)' }, ticks: { callback: v => '$' + v / 1000 + 'k' } },
-        x: { grid: { display: false } }
-      },
-      animation: { duration: 1500, easing: 'easeOutQuart' }
-    }
-  });
-
-  // Doughnut Chart
-  doughnutChart = new Chart(ctxDoughnut, {
-    type: 'doughnut',
-    data: {
-      labels: ['Fiction', 'Non-Fiction', 'Academic', 'Comics'],
-      datasets: [{
-        data: [45, 25, 20, 10],
-        backgroundColor: ['#6366f1', '#14b8a6', '#f59e0b', '#8b5cf6'],
-        borderWidth: 0,
-        hoverOffset: 4
-      }]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      plugins: {
-        legend: { position: 'bottom', labels: { padding: 20, usePointStyle: true, pointStyle: 'circle' } }
-      },
-      cutout: '75%',
-      animation: { animateScale: true, animateRotate: true, duration: 1500 }
-    }
-  });
-}
-
-// Filter Dropdown Animation
-document.getElementById('report-filter')?.addEventListener('change', (e) => {
-  if (lineChart) {
-    lineChart.data.datasets[0].data = Array.from({ length: 6 }, () => Math.floor(Math.random() * 40000) + 10000);
-    lineChart.update();
-  }
-  const kpis = [
-    { id: 'kpi-revenue', val: Math.floor(Math.random() * 200000) + 50000, format: v => '$' + v.toLocaleString() },
-    { id: 'kpi-orders', val: Math.floor(Math.random() * 5000) + 1000, format: v => v.toLocaleString() },
-    { id: 'kpi-customers', val: Math.floor(Math.random() * 2000) + 500, format: v => v.toLocaleString() }
-  ];
-  kpis.forEach(kpi => {
-    const el = document.getElementById(kpi.id);
-    if (el) {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(10px)';
-      setTimeout(() => {
-        el.textContent = kpi.format(kpi.val);
-        el.style.transition = 'all 0.5s';
-        el.style.opacity = '1';
-        el.style.transform = 'translateY(0)';
-      }, 300);
-    }
-  });
-});
+"""
+    new_content = slides_content + content[app_logic_index:]
+    
+    # Remove setupSimulator
+    new_content = re.sub(r'\s*// Attach Simulator Logic if on Slide 8.*?if \(index === 7\) {\s*setupSimulator\(\);\s*}', '', new_content, flags=re.DOTALL)
+    new_content = re.sub(r'// Live Simulator Logic.*?function setupSimulator\(\) \{.*$', '', new_content, flags=re.DOTALL)
+    
+    with open('d:/graduation/presentation/csjs/scripts.js', 'w', encoding='utf-8') as f:
+        f.write(new_content)
+        
+modify_file()

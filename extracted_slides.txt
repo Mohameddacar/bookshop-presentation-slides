@@ -1,0 +1,237 @@
+
+--- ppt/slides/slide1.xml ---
+BOOKSHOP SYSTEM
+A centralized platform for
+BrightMTS operations
+Case Study: Bright Multiservices and Tech Solutions
+THESIS PRESENTATION
+From operational problem to implemented and tested solution
+BOOKSHOP SYSTEM  •  BRIGHT MULTISERVICES AND TECH SOLUTIONS
+01
+--- ppt/slides/slide2.xml ---
+01 / STUDY BACKGROUND
+BrightMTS needed one system for a growing operation
+The company distributes Magic Pearls and Kokos AI learning series from Waberi District, Mogadishu.
+OPERATIONAL CONTEXT
+Bright Multiservices and Tech Solutions serves schools, institutions, organizations, bookstores and individual customers.
+01
+More activity
+Products, customers and daily transactions continued to increase.
+02
+More coordination
+Sales, inventory, payments and delivery needed shared information.
+Research need
+A web-based system that integrates the company’s main business processes and supports accurate decisions.
+BOOKSHOP SYSTEM  •  BRIGHT MULTISERVICES AND TECH SOLUTIONS
+02
+--- ppt/slides/slide3.xml ---
+02 / PROBLEM STATEMENT
+Manual records created errors, delays and limited visibility
+Information was distributed across handwritten records and separate Microsoft Office files.
+01
+Inventory
+Stock levels and movements were difficult to monitor accurately.
+02
+Transactions
+Manual recording increased duplication and calculation errors.
+03
+Customer service
+Physical and online orders were harder to process and follow.
+04
+Management
+Reports were delayed, limiting timely decision-making.
+BOOKSHOP SYSTEM  •  BRIGHT MULTISERVICES AND TECH SOLUTIONS
+03
+--- ppt/slides/slide4.xml ---
+03 / RESEARCH OBJECTIVES
+The study linked system development, validation and reporting
+The general objective guided three specific objectives that were later evaluated in Chapter Six.
+GENERAL OBJECTIVE
+Design and develop a web-based Bookshop System that improves inventory management, automates sales operations and supports efficient business decision-making.
+01
+Implement core modules
+Inventory control, sales processing, online ordering and role-based access control.
+02
+Validate the system
+Evaluate functionality, usability, security and overall performance.
+03
+Generate real-time reports
+Report inventory, sales, customers, payments, deliveries and business performance.
+BOOKSHOP SYSTEM  •  BRIGHT MULTISERVICES AND TECH SOLUTIONS
+04
+--- ppt/slides/slide5.xml ---
+04 / CONTENT SCOPE
+The system covers the complete operating cycle
+The project combined internal administration, customer ordering and management reporting.
+CATALOG
+Products, categories, brands and variants
+STOCK
+Warehouses, inventory and stock movements
+COMMERCE
+POS, sales, online orders and payments
+RELATIONSHIPS
+Customers and sponsors
+FULFILMENT
+Delivery assignments, confirmations and incidents
+CONTROL
+Users, roles, notifications, settings and reports
+BOOKSHOP SYSTEM  •  BRIGHT MULTISERVICES AND TECH SOLUTIONS
+05
+--- ppt/slides/slide6.xml ---
+05 / SIGNIFICANCE
+The system creates value for operations, customers and research
+Each stakeholder benefits from the same centralized and current information.
+1
+Company
+Less manual work, improved inventory accuracy and reliable operational information.
+2
+Employees
+Simpler daily tasks with fewer repeated entries and fewer avoidable errors.
+3
+Customers
+Clear product availability, online ordering and more organized fulfilment.
+4
+Management
+Current dashboards and reports for monitoring and decisions.
+5
+Students and researchers
+A practical reference for web systems and business process automation.
+BOOKSHOP SYSTEM  •  BRIGHT MULTISERVICES AND TECH SOLUTIONS
+06
+--- ppt/slides/slide7.xml ---
+06 / DEVELOPMENT APPROACH
+Requirements became an implemented web application
+Observation, interviews and document review grounded the design in the company’s real workflow.
+1
+Analyze
+Identify manual-process problems
+2
+Design
+Define architecture, database and interfaces
+3
+Develop
+Build frontend, API and data layer
+4
+Test
+Run unit, integration, system and UAT
+TECHNICAL FOUNDATION
+Next.js + TypeScript
+Frontend interface
+Node.js + Express
+Backend services
+PostgreSQL + Prisma
+Data management
+Tailwind + shadcn/ui
+Responsive UI
+BOOKSHOP SYSTEM  •  BRIGHT MULTISERVICES AND TECH SOLUTIONS
+07
+--- ppt/slides/slide8.xml ---
+07 / IMPLEMENTED WORKFLOW
+One transaction updates every related activity
+The system supports both walk-in sales and online orders through a shared database.
+01
+Customer selects books
+02
+Sale or order is recorded
+03
+Payment is registered
+04
+Inventory updates
+05
+Delivery progresses
+06
+Reports refresh
+BOOKSHOP SYSTEM  •  BRIGHT MULTISERVICES AND TECH SOLUTIONS
+08
+--- ppt/slides/slide9.xml ---
+08 / IMPLEMENTATION RESULTS
+All planned modules were completed and integrated
+Chapter Six confirms that the major functional modules operated successfully.
+Authentication, users and roles
+Completed
+Integrated with shared operational data
+Catalog, warehouses and inventory
+Completed
+Integrated with shared operational data
+Sales, POS, orders and payments
+Completed
+Integrated with shared operational data
+Delivery, notifications and reports
+Completed
+Integrated with shared operational data
+OBJECTIVES ACHIEVED
+Core functions, validation and real-time reporting
+BOOKSHOP SYSTEM  •  BRIGHT MULTISERVICES AND TECH SOLUTIONS
+09
+--- ppt/slides/slide10.xml ---
+09 / EVALUATION RESULTS
+Testing confirmed performance, accuracy and security
+The documented Chapter Six metrics met every defined target.
+Metric
+Target
+Result
+Status
+Login response
+≤ 2 seconds
+1.3 seconds
+Achieved
+Dashboard loading
+≤ 3 seconds
+2.1 seconds
+Achieved
+Inventory accuracy
+100%
+100%
+Achieved
+Sales accuracy
+100%
+100%
+Achieved
+Report generation
+≤ 5 seconds
+2.8 seconds
+Achieved
+Role-based security
+Implemented
+Implemented
+Achieved
+Testing also confirmed successful online-order processing, functional delivery processing and positive usability feedback.
+BOOKSHOP SYSTEM  •  BRIGHT MULTISERVICES AND TECH SOLUTIONS
+10
+--- ppt/slides/slide11.xml ---
+10 / PROBLEMS ADDRESSED
+Manual problems and implemented responses
+Every major weakness identified in Chapter One received a corresponding system function.
+Chapter One problem
+Implemented response
+Manual product records
+Centralized product and catalog database
+Manual stock counting
+Automatic inventory updates and stock movement history
+Paper-based sales
+POS and automated transaction recording
+No online ordering
+Customer-facing web store and order management
+Manual delivery follow-up
+Delivery assignment, status and confirmation workflow
+Delayed manual reports
+Current operational dashboards and reports
+Limited access control
+Authentication and role-based permissions
+BOOKSHOP SYSTEM  •  BRIGHT MULTISERVICES AND TECH SOLUTIONS
+11
+--- ppt/slides/slide12.xml ---
+11 / CONCLUSION
+The project achieved its research purpose
+BrightMTS now has a tested foundation for centralized digital operations.
+CENTRALIZED
+Products, stock, customers, sales, orders, payments and delivery
+AUTOMATED
+Inventory updates, notifications and operational reporting
+VALIDATED
+Unit, integration, system and user acceptance testing
+DECISION SUPPORT
+Current dashboards and reports for authorized users
+THANK YOU  •  QUESTIONS AND DISCUSSION
+BOOKSHOP SYSTEM  •  BRIGHT MULTISERVICES AND TECH SOLUTIONS
+12
