@@ -13,16 +13,19 @@ def modify_file():
         
     slides_content = """const SLIDES = [
     {
-        eyebrow: "SLIDE 1 — TITLE",
+        eyebrow: "SLIDE 1 — INTRODUCTION",
         title: "ONLINE BOOKSHOP SYSTEM",
         subtitle: "A web-based platform for managing books, inventory, sales, online orders, payments, deliveries, and reports.",
         html: `<div class="feature-grid" style="grid-template-columns: 1fr; text-align: center;">
-                  <div class="feature-card" style="border-top: 4px solid var(--accent-blue); padding: 4rem 2rem;">
+                  <div class="feature-card" style="border-top: 4px solid var(--accent-blue); padding: 3rem 2rem;">
+                      <div style="margin-bottom: 1rem;">
+                          <span style="display: inline-block; padding: 0.5rem 1.5rem; background: rgba(99,102,241,0.1); color: var(--accent-blue); border-radius: 20px; font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2rem;">Faculty of Computing and Informatics</span>
+                      </div>
                       <div class="feature-icon" style="transform: scale(1.5); margin-bottom: 2rem; color: var(--accent-blue); background: rgba(99,102,241,0.1);">
                           <i data-lucide="book-open" style="width: 64px; height: 64px;"></i>
                       </div>
-                      <h2 style="font-size: 3rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1.5rem; letter-spacing: -1px;">ONLINE BOOKSHOP SYSTEM</h2>
-                      <p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto 2.5rem auto; color: var(--text-secondary); line-height: 1.6;">A web-based platform for managing books, inventory, sales, online orders, payments, deliveries, and reports.</p>
+                      <h2 style="font-size: 3.5rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1.5rem; letter-spacing: -1px;">ONLINE BOOKSHOP SYSTEM</h2>
+                      <p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto 2.5rem auto; color: var(--text-secondary); line-height: 1.6;">Design and develop a web-based Online Bookshop System that improves inventory management, automates sales operations, and supports efficient business decision-making.</p>
                       <div style="display: inline-block; padding: 0.75rem 2rem; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 50px;">
                           <span style="color: var(--text-secondary); font-weight: 500; font-size: 1.1rem;">Case Study: </span>
                           <strong style="color: var(--accent-blue); font-size: 1.1rem;">Bright Multiservices and Tech Solutions</strong>
@@ -34,36 +37,47 @@ def modify_file():
         eyebrow: "SLIDE 2 — PROJECT TEAM",
         title: "Project Team",
         subtitle: "The research and development team for the Online Bookshop System.",
-        html: `<div style="display: flex; flex-direction: column; align-items: center; gap: 2rem;">
-            <div class="feature-card" style="border-top: 4px solid var(--accent-blue); text-align: center; padding: 2rem; width: 100%; max-width: 400px; background: rgba(99,102,241,0.03);">
-                <div style="width: 80px; height: 80px; background: var(--accent-blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto; font-size: 2rem; font-weight: 700;">MM</div>
-                <h3 style="font-size: 1.5rem; color: var(--text-primary); margin-bottom: 0.25rem;">Mohamed Da’ar Muhumed</h3>
-                <span style="display: inline-block; padding: 0.25rem 1rem; background: rgba(99,102,241,0.1); color: var(--accent-blue); border-radius: 20px; font-size: 0.9rem; font-weight: 600;">Team Leader</span>
+        html: `<div style="display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; align-items: stretch; width: 100%;">
+            <!-- Left Side: Supervisor -->
+            <div class="feature-card" style="border-top: 4px solid #f59e0b; text-align: center; padding: 3rem 2rem; background: var(--bg-primary); box-shadow: 0 10px 30px rgba(0,0,0,0.06); border-radius: 16px; display: flex; flex-direction: column; justify-content: center;">
+                <div style="width: 100px; height: 100px; background: linear-gradient(135deg, #f59e0b, #d97706); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto; font-size: 2.5rem; font-weight: 800; box-shadow: 0 8px 20px rgba(245, 158, 11, 0.4); border: 5px solid var(--bg-primary);">AM</div>
+                <h3 style="font-size: 1.8rem; color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 800;">Eng. Abdirizack Mohamed</h3>
+                <span style="display: inline-block; padding: 0.4rem 1.5rem; background: rgba(245,158,11,0.1); color: #d97706; border-radius: 20px; font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-top: 0.5rem;">Project Supervisor</span>
             </div>
-            <div class="feature-grid" style="grid-template-columns: repeat(4, 1fr); width: 100%; gap: 1.5rem;">
-                <div class="feature-card" style="text-align: center; padding: 1.5rem;">
-                    <div style="width: 60px; height: 60px; background: var(--bg-secondary); border: 1px solid var(--border-color); color: var(--text-secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto; font-size: 1.5rem; font-weight: 600;">RW</div>
-                    <h4 style="font-size: 1.1rem; color: var(--text-primary);">Rayan Abdinasir<br>Warsame</h4>
+
+            <!-- Right Side: Team Members -->
+            <div class="feature-card" style="border-top: 4px solid var(--accent-blue); padding: 2rem; background: var(--bg-primary); box-shadow: 0 10px 30px rgba(0,0,0,0.06); border-radius: 16px;">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #6366f1, #4f46e5); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto; font-size: 2rem; font-weight: 700; box-shadow: 0 6px 15px rgba(99, 102, 241, 0.3); border: 4px solid var(--bg-primary);">MM</div>
+                    <h3 style="font-size: 1.5rem; color: var(--text-primary); margin-bottom: 0.25rem; font-weight: 800;">Mohamed Da’ar Muhumed</h3>
+                    <span style="display: inline-block; padding: 0.3rem 1.2rem; background: rgba(99,102,241,0.1); color: var(--accent-blue); border-radius: 20px; font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Group Leader</span>
                 </div>
-                <div class="feature-card" style="text-align: center; padding: 1.5rem;">
-                    <div style="width: 60px; height: 60px; background: var(--bg-secondary); border: 1px solid var(--border-color); color: var(--text-secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto; font-size: 1.5rem; font-weight: 600;">IA</div>
-                    <h4 style="font-size: 1.1rem; color: var(--text-primary);">Ilyaas Abdi<br>Ahmed</h4>
-                </div>
-                <div class="feature-card" style="text-align: center; padding: 1.5rem;">
-                    <div style="width: 60px; height: 60px; background: var(--bg-secondary); border: 1px solid var(--border-color); color: var(--text-secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto; font-size: 1.5rem; font-weight: 600;">WM</div>
-                    <h4 style="font-size: 1.1rem; color: var(--text-primary);">Wafaa Said<br>Mohamed</h4>
-                </div>
-                <div class="feature-card" style="text-align: center; padding: 1.5rem;">
-                    <div style="width: 60px; height: 60px; background: var(--bg-secondary); border: 1px solid var(--border-color); color: var(--text-secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto; font-size: 1.5rem; font-weight: 600;">AS</div>
-                    <h4 style="font-size: 1.1rem; color: var(--text-primary);">Abdirisack Abdi<br>Sheikhdon</h4>
+                
+                <div class="feature-grid" style="grid-template-columns: repeat(2, 1fr); gap: 1.5rem;">
+                    <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color);">
+                        <div style="width: 50px; height: 50px; background: white; border: 2px solid var(--border-color); color: var(--text-secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: 700;">RW</div>
+                        <h4 style="font-size: 1.1rem; color: var(--text-primary); font-weight: 600; line-height: 1.2;">Rayan Abdinasir<br>Warsame</h4>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color);">
+                        <div style="width: 50px; height: 50px; background: white; border: 2px solid var(--border-color); color: var(--text-secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: 700;">IA</div>
+                        <h4 style="font-size: 1.1rem; color: var(--text-primary); font-weight: 600; line-height: 1.2;">Ilyaas Abdi<br>Ahmed</h4>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color);">
+                        <div style="width: 50px; height: 50px; background: white; border: 2px solid var(--border-color); color: var(--text-secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: 700;">WM</div>
+                        <h4 style="font-size: 1.1rem; color: var(--text-primary); font-weight: 600; line-height: 1.2;">Wafaa Said<br>Mohamed</h4>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color);">
+                        <div style="width: 50px; height: 50px; background: white; border: 2px solid var(--border-color); color: var(--text-secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: 700;">AS</div>
+                        <h4 style="font-size: 1.1rem; color: var(--text-primary); font-weight: 600; line-height: 1.2;">Abdirisack Abdi<br>Sheikhdon</h4>
+                    </div>
                 </div>
             </div>
         </div>`
     },
     {
-        eyebrow: "SLIDE 3 — BACKGROUND AND PROBLEM GAP",
-        title: "Background and Problem Gap",
-        subtitle: "Bright Multiservices and Tech Solutions distributes the Magic Pearls and Kokos AI educational book series to schools, organizations, bookstores, and individual customers.",
+        eyebrow: "SLIDE 3 — BACKGROUND AND PROBLEM STATEMENT",
+        title: "Background and Problem Statement",
+        subtitle: "Bright Multiservices and Tech Solutions distributes educational book series to schools, organizations, bookstores, and individual customers.",
         html: `<div style="display: flex; flex-direction: column; gap: 2rem;">
             <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.5rem; text-align: center;">
                 <p style="font-size: 1.1rem; color: var(--text-primary);">Before the project, the company used handwritten records and separate spreadsheets.</p>
@@ -91,13 +105,37 @@ def modify_file():
                 </div>
             </div>
             <div style="background: rgba(99,102,241,0.05); border-left: 4px solid var(--accent-blue); padding: 1.5rem; border-radius: 0 8px 8px 0;">
-                <h4 style="color: var(--accent-blue); font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: 700;">Identified Gap</h4>
-                <p style="font-size: 1.15rem; color: var(--text-primary); font-weight: 500;">The company needed one web-based system that connected its main business activities.</p>
+                <h4 style="color: var(--accent-blue); font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: 700;">Problem Statement</h4>
+                <p style="font-size: 1.15rem; color: var(--text-primary); font-weight: 500;">The reliance on manual, disconnected processes results in operational inefficiencies, data loss, delayed reporting, and poor customer experience.</p>
             </div>
         </div>`
     },
     {
-        eyebrow: "SLIDE 4 — RESEARCH OBJECTIVES",
+        eyebrow: "SLIDE 4 — PROJECT SOLUTION",
+        title: "Project Solution",
+        subtitle: "A unified, web-based platform to centralize and automate operations.",
+        html: `<div class="feature-grid" style="grid-template-columns: 1fr 1fr; gap: 2rem;">
+            <div class="feature-card" style="border-top: 4px solid var(--accent-green); padding: 2.5rem;">
+                <div class="feature-icon" style="color: var(--accent-green); background: rgba(16, 185, 129, 0.1); transform: scale(1.2); margin-bottom: 1.5rem;"><i data-lucide="globe"></i></div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; font-weight: 800;">Web-Based Integration</h3>
+                <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.6;">Replacing fragmented spreadsheets with a cloud-accessible portal that connects physical sales with online orders in real-time.</p>
+            </div>
+            <div class="feature-card" style="border-top: 4px solid var(--accent-blue); padding: 2.5rem;">
+                <div class="feature-icon" style="color: var(--accent-blue); background: rgba(99, 102, 241, 0.1); transform: scale(1.2); margin-bottom: 1.5rem;"><i data-lucide="cpu"></i></div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; font-weight: 800;">Automated Workflows</h3>
+                <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.6;">Automating stock deductions, payment tracking, receipt generation, and business reporting to eliminate human error and save time.</p>
+            </div>
+            <div class="feature-card" style="border-top: 4px solid var(--accent-gold); padding: 2.5rem; grid-column: span 2; display: flex; align-items: center; gap: 2rem;">
+                <div class="feature-icon" style="color: var(--accent-gold); background: rgba(245, 158, 11, 0.1); transform: scale(1.5); margin: 0;"><i data-lucide="bar-chart"></i></div>
+                <div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; font-weight: 800;">Data-Driven Decisions</h3>
+                    <p style="font-size: 1.1rem; color: var(--text-secondary);">Providing management with instantly updated analytics on revenue, popular books, and inventory shortages.</p>
+                </div>
+            </div>
+        </div>`
+    },
+    {
+        eyebrow: "SLIDE 5 — RESEARCH OBJECTIVES",
         title: "Research Objectives",
         subtitle: "General Objective: To design and develop a web-based Online Bookshop System that improves inventory management, automates sales operations, and supports business decision-making.",
         html: `<div class="feature-grid" style="grid-template-columns: repeat(3, 1fr); margin-top: 2rem;">
@@ -119,7 +157,7 @@ def modify_file():
         </div>`
     },
     {
-        eyebrow: "SLIDE 5 — SYSTEM SCOPE",
+        eyebrow: "SLIDE 6 — SYSTEM SCOPE",
         title: "System Scope",
         subtitle: "The system provides a comprehensive cycle of integrated operations.",
         html: `<div class="workflow-track" style="margin-bottom: 3rem;">
@@ -159,12 +197,11 @@ def modify_file():
         </div>`
     },
     {
-        eyebrow: "SLIDE 6 — DEVELOPMENT APPROACH AND TECHNOLOGY",
-        title: "Development Approach and Technology",
-        subtitle: "Requirement Collection: Interviews, observation, and document review.",
+        eyebrow: "SLIDE 7 — METHODOLOGY AND TECH USED",
+        title: "Methodology and Tech Used",
+        subtitle: "Rapid Application Development (RAD) approach allowed for fast prototyping and iterative feedback.",
         html: `<div style="display: flex; flex-direction: column; gap: 2rem;">
             <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.5rem; text-align: center;">
-                <h3 style="font-size: 1.2rem; color: var(--text-primary); margin-bottom: 1.5rem;">Development Method: <span style="color: var(--accent-blue);">Rapid Application Development</span></h3>
                 <div class="workflow-track" style="margin-bottom: 0;">
                     <div class="workflow-line"></div>
                     <div class="workflow-node active" style="border-color: var(--accent-blue);"><i data-lucide="clipboard-list" style="color: var(--accent-blue);"></i><span class="workflow-label">Requirements Planning</span></div>
@@ -174,31 +211,105 @@ def modify_file():
                 </div>
             </div>
             <div>
-                <h3 style="font-size: 1.2rem; color: var(--text-primary); margin-bottom: 1rem; text-align: center;">Technology Stack Architecture</h3>
-                <div class="feature-grid" style="grid-template-columns: repeat(3, 1fr);">
+                <h3 style="font-size: 1.2rem; color: var(--text-primary); margin-bottom: 1rem; text-align: center;">Technology Stack Overview</h3>
+                <div class="feature-grid" style="grid-template-columns: repeat(4, 1fr);">
                     <div class="feature-card" style="text-align: center; padding: 1.5rem; border-top: 4px solid var(--accent-blue);">
-                        <div class="feature-icon" style="color: var(--accent-blue); margin: 0 auto 1rem auto; background: rgba(99,102,241,0.1);"><i data-lucide="monitor"></i></div>
-                        <h4 style="font-weight:700; margin-bottom: 0.5rem;">Presentation Layer</h4>
-                        <p style="font-size: 1rem; color: var(--text-secondary);">Next.js, TypeScript, Tailwind CSS, and shadcn/ui</p>
+                        <div class="feature-icon" style="color: var(--accent-blue); margin: 0 auto 1rem auto; background: rgba(99,102,241,0.1);"><i data-lucide="layout"></i></div>
+                        <h4 style="font-weight:700; margin-bottom: 0.5rem;">Frontend</h4>
+                        <p style="font-size: 0.95rem; color: var(--text-secondary);">Next.js, Tailwind CSS</p>
                     </div>
                     <div class="feature-card" style="text-align: center; padding: 1.5rem; border-top: 4px solid var(--accent-gold);">
                         <div class="feature-icon" style="color: var(--accent-gold); margin: 0 auto 1rem auto; background: rgba(245,158,11,0.1);"><i data-lucide="cpu"></i></div>
-                        <h4 style="font-weight:700; margin-bottom: 0.5rem;">Application Layer</h4>
-                        <p style="font-size: 1rem; color: var(--text-secondary);">Node.js and Express.js</p>
+                        <h4 style="font-weight:700; margin-bottom: 0.5rem;">Backend API</h4>
+                        <p style="font-size: 0.95rem; color: var(--text-secondary);">Node.js, Express.js</p>
                     </div>
                     <div class="feature-card" style="text-align: center; padding: 1.5rem; border-top: 4px solid var(--accent-green);">
                         <div class="feature-icon" style="color: var(--accent-green); margin: 0 auto 1rem auto; background: rgba(16,185,129,0.1);"><i data-lucide="database"></i></div>
-                        <h4 style="font-weight:700; margin-bottom: 0.5rem;">Database Layer</h4>
-                        <p style="font-size: 1rem; color: var(--text-secondary);">PostgreSQL and Prisma ORM</p>
+                        <h4 style="font-weight:700; margin-bottom: 0.5rem;">Database</h4>
+                        <p style="font-size: 0.95rem; color: var(--text-secondary);">PostgreSQL, Prisma ORM</p>
+                    </div>
+                    <div class="feature-card" style="text-align: center; padding: 1.5rem; border-top: 4px solid #8b5cf6;">
+                        <div class="feature-icon" style="color: #8b5cf6; margin: 0 auto 1rem auto; background: rgba(139,92,246,0.1);"><i data-lucide="server"></i></div>
+                        <h4 style="font-weight:700; margin-bottom: 0.5rem;">Deployment</h4>
+                        <p style="font-size: 0.95rem; color: var(--text-secondary);">Vercel & Railway App</p>
                     </div>
                 </div>
             </div>
         </div>`
     },
     {
-        eyebrow: "SLIDE 7 — IMPLEMENTATION AND VALIDATION RESULTS",
-        title: "Implementation and Validation Results",
-        subtitle: "The system connects all primary workflows into one seamless platform.",
+        eyebrow: "SLIDE 8 — SYSTEM ARCHITECTURE",
+        title: "System Architecture",
+        subtitle: "A modern multi-tier architecture ensuring scalability, security, and performance.",
+        html: `<div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
+            
+            <!-- Client Layer -->
+            <div style="width: 100%; max-width: 800px; border: 2px dashed var(--accent-blue); padding: 1.5rem; border-radius: 12px; position: relative; background: rgba(99,102,241,0.03);">
+                <div style="position: absolute; top: -14px; left: 20px; background: var(--bg-primary); padding: 0 10px; color: var(--accent-blue); font-weight: 700; font-size: 0.9rem; text-transform: uppercase;">1. Client / Presentation Layer</div>
+                <div style="display: flex; justify-content: space-around;">
+                    <div style="text-align: center;"><i data-lucide="monitor" style="width: 40px; height: 40px; color: var(--text-primary); margin-bottom: 0.5rem;"></i><br><span style="font-weight: 600;">Admin Dashboard</span></div>
+                    <div style="text-align: center;"><i data-lucide="smartphone" style="width: 40px; height: 40px; color: var(--text-primary); margin-bottom: 0.5rem;"></i><br><span style="font-weight: 600;">Customer Portal</span></div>
+                    <div style="text-align: center;"><i data-lucide="shopping-bag" style="width: 40px; height: 40px; color: var(--text-primary); margin-bottom: 0.5rem;"></i><br><span style="font-weight: 600;">POS Terminal</span></div>
+                </div>
+            </div>
+
+            <i data-lucide="arrow-down" style="color: var(--text-secondary);"></i>
+
+            <!-- Application Layer -->
+            <div style="width: 100%; max-width: 800px; border: 2px dashed var(--accent-gold); padding: 1.5rem; border-radius: 12px; position: relative; background: rgba(245,158,11,0.03);">
+                <div style="position: absolute; top: -14px; left: 20px; background: var(--bg-primary); padding: 0 10px; color: var(--accent-gold); font-weight: 700; font-size: 0.9rem; text-transform: uppercase;">2. Application / Business Logic Layer</div>
+                <div style="display: flex; justify-content: space-around;">
+                    <div style="text-align: center; background: white; padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid var(--border-color);"><span style="font-weight: 600; color: #d97706;">Auth & Authz</span></div>
+                    <div style="text-align: center; background: white; padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid var(--border-color);"><span style="font-weight: 600; color: #d97706;">Inventory Engine</span></div>
+                    <div style="text-align: center; background: white; padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid var(--border-color);"><span style="font-weight: 600; color: #d97706;">Sales & Orders</span></div>
+                    <div style="text-align: center; background: white; padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid var(--border-color);"><span style="font-weight: 600; color: #d97706;">Reporting</span></div>
+                </div>
+            </div>
+
+            <i data-lucide="arrow-down" style="color: var(--text-secondary);"></i>
+
+            <!-- Data Layer -->
+            <div style="width: 100%; max-width: 800px; border: 2px dashed var(--accent-green); padding: 1.5rem; border-radius: 12px; position: relative; background: rgba(16,185,129,0.03);">
+                <div style="position: absolute; top: -14px; left: 20px; background: var(--bg-primary); padding: 0 10px; color: var(--accent-green); font-weight: 700; font-size: 0.9rem; text-transform: uppercase;">3. Data Access Layer</div>
+                <div style="display: flex; justify-content: center; gap: 3rem;">
+                    <div style="text-align: center;"><i data-lucide="database" style="width: 48px; height: 48px; color: var(--accent-green); margin-bottom: 0.5rem;"></i><br><span style="font-weight: 600;">PostgreSQL Relational DB</span></div>
+                    <div style="text-align: center;"><i data-lucide="image" style="width: 48px; height: 48px; color: var(--accent-green); margin-bottom: 0.5rem;"></i><br><span style="font-weight: 600;">Cloud Storage (Images)</span></div>
+                </div>
+            </div>
+
+        </div>`
+    },
+    {
+        eyebrow: "SLIDE 9 — SYSTEM USERS",
+        title: "System Users",
+        subtitle: "Role-Based Access Control tailors the experience to specific actors.",
+        html: `<div class="feature-grid" style="grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 2rem;">
+            <div class="feature-card" style="text-align: center; padding: 2rem 1.5rem; border-top: 4px solid var(--accent-blue);">
+                <div class="feature-icon" style="color: var(--accent-blue); background: rgba(99,102,241,0.1); margin: 0 auto 1.5rem auto; transform: scale(1.2);"><i data-lucide="shield"></i></div>
+                <h3 style="font-size: 1.3rem; margin-bottom: 1rem; font-weight: 800;">Administrator</h3>
+                <p style="font-size: 0.95rem; color: var(--text-secondary);">Full access to manage users, settings, inventory, and view all executive reports.</p>
+            </div>
+            <div class="feature-card" style="text-align: center; padding: 2rem 1.5rem; border-top: 4px solid var(--accent-gold);">
+                <div class="feature-icon" style="color: var(--accent-gold); background: rgba(245,158,11,0.1); margin: 0 auto 1.5rem auto; transform: scale(1.2);"><i data-lucide="briefcase"></i></div>
+                <h3 style="font-size: 1.3rem; margin-bottom: 1rem; font-weight: 800;">Sales Staff</h3>
+                <p style="font-size: 0.95rem; color: var(--text-secondary);">Access to POS, physical orders, online order fulfillment, and basic inventory checks.</p>
+            </div>
+            <div class="feature-card" style="text-align: center; padding: 2rem 1.5rem; border-top: 4px solid var(--accent-green);">
+                <div class="feature-icon" style="color: var(--accent-green); background: rgba(16,185,129,0.1); margin: 0 auto 1.5rem auto; transform: scale(1.2);"><i data-lucide="truck"></i></div>
+                <h3 style="font-size: 1.3rem; margin-bottom: 1rem; font-weight: 800;">Delivery Staff</h3>
+                <p style="font-size: 0.95rem; color: var(--text-secondary);">Access restricted to viewing assigned orders and updating delivery statuses.</p>
+            </div>
+            <div class="feature-card" style="text-align: center; padding: 2rem 1.5rem; border-top: 4px solid #8b5cf6;">
+                <div class="feature-icon" style="color: #8b5cf6; background: rgba(139,92,246,0.1); margin: 0 auto 1.5rem auto; transform: scale(1.2);"><i data-lucide="users"></i></div>
+                <h3 style="font-size: 1.3rem; margin-bottom: 1rem; font-weight: 800;">Online Customer</h3>
+                <p style="font-size: 0.95rem; color: var(--text-secondary);">Public storefront access to browse books, place orders, and track history.</p>
+            </div>
+        </div>`
+    },
+    {
+        eyebrow: "SLIDE 10 — RESULT AND IMPLEMENTATIONS",
+        title: "Result and Implementations",
+        subtitle: "The system successfully connects all primary workflows into one seamless platform.",
         html: `<div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 2rem; align-items: center;">
             <div style="background: #fff; border: 1px solid var(--border-color); border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); overflow: hidden; display: flex; flex-direction: column;">
                 <div style="background: var(--bg-secondary); padding: 0.75rem 1rem; border-bottom: 1px solid var(--border-color); display: flex; align-items: center; gap: 0.5rem;">
@@ -231,40 +342,30 @@ def modify_file():
                     <div style="color: var(--accent-blue); background: rgba(99,102,241,0.1); padding: 0.5rem; border-radius: 8px;"><i data-lucide="layers" style="width: 20px; height: 20px;"></i></div>
                     <div>
                         <h3 style="font-size: 1.05rem; margin-bottom: 0.1rem; color: var(--accent-blue);">Integrated</h3>
-                        <p style="font-size: 0.9rem; color: var(--text-secondary);">The planned modules were completed and connected through one centralized database.</p>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Modules were completed and connected centrally.</p>
                     </div>
                 </div>
                 <div style="display: flex; gap: 1rem; align-items: flex-start;">
                     <div style="color: var(--accent-blue); background: rgba(99,102,241,0.1); padding: 0.5rem; border-radius: 8px;"><i data-lucide="git-merge" style="width: 20px; height: 20px;"></i></div>
                     <div>
                         <h3 style="font-size: 1.05rem; margin-bottom: 0.1rem; color: var(--accent-blue);">Connected</h3>
-                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Sales, orders, payments, inventory, deliveries, and reports share information.</p>
-                    </div>
-                </div>
-                <div style="display: flex; gap: 1rem; align-items: flex-start;">
-                    <div style="color: var(--accent-blue); background: rgba(99,102,241,0.1); padding: 0.5rem; border-radius: 8px;"><i data-lucide="shield-check" style="width: 20px; height: 20px;"></i></div>
-                    <div>
-                        <h3 style="font-size: 1.05rem; margin-bottom: 0.1rem; color: var(--accent-blue);">Controlled</h3>
-                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Authentication, validation, and Role-Based Access protect functions.</p>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Sales, orders, and inventory now share live information.</p>
                     </div>
                 </div>
                 <div style="display: flex; gap: 1rem; align-items: flex-start;">
                     <div style="color: var(--accent-blue); background: rgba(99,102,241,0.1); padding: 0.5rem; border-radius: 8px;"><i data-lucide="check-circle" style="width: 20px; height: 20px;"></i></div>
                     <div>
                         <h3 style="font-size: 1.05rem; margin-bottom: 0.1rem; color: var(--accent-blue);">Validated</h3>
-                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Testing confirmed that main workflows produced expected results.</p>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Testing confirmed that main workflows produce expected results.</p>
                     </div>
-                </div>
-                <div style="background: rgba(16,185,129,0.05); border-left: 3px solid var(--accent-green); padding: 0.75rem 1rem;">
-                    <p style="font-size: 0.9rem; color: var(--text-secondary);"><strong>Reporting:</strong> The system generates updated inventory, sales, customer, payment, order, and delivery reports.</p>
                 </div>
             </div>
         </div>`
     },
     {
-        eyebrow: "SLIDE 8 — CONCLUSION",
+        eyebrow: "SLIDE 11 — CONCLUSION",
         title: "Conclusion",
-        subtitle: "The Online Bookshop System replaced fragmented manual records with one integrated web-based platform.",
+        subtitle: "The Online Bookshop System successfully transitions BrightMTS to a digital-first operation.",
         html: `<div style="display: flex; flex-direction: column; gap: 2rem;">
             <div class="feature-grid" style="grid-template-columns: repeat(5, 1fr); margin-bottom: 1rem;">
                 <div class="feature-card" style="text-align: center; padding: 1.25rem;">
@@ -273,7 +374,7 @@ def modify_file():
                 </div>
                 <div class="feature-card" style="text-align: center; padding: 1.25rem;">
                     <div class="feature-icon" style="color: var(--accent-blue); margin: 0 auto 1rem auto; background: rgba(99,102,241,0.1); width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i data-lucide="package-check"></i></div>
-                    <p style="font-size: 0.9rem; font-weight: 500;">Supported stock monitoring and transaction recording.</p>
+                    <p style="font-size: 0.9rem; font-weight: 500;">Supported live stock monitoring & transaction tracking.</p>
                 </div>
                 <div class="feature-card" style="text-align: center; padding: 1.25rem;">
                     <div class="feature-icon" style="color: var(--accent-blue); margin: 0 auto 1rem auto; background: rgba(99,102,241,0.1); width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i data-lucide="monitor-smartphone"></i></div>
@@ -281,24 +382,36 @@ def modify_file():
                 </div>
                 <div class="feature-card" style="text-align: center; padding: 1.25rem;">
                     <div class="feature-icon" style="color: var(--accent-blue); margin: 0 auto 1rem auto; background: rgba(99,102,241,0.1); width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i data-lucide="refresh-cw"></i></div>
-                    <p style="font-size: 0.9rem; font-weight: 500;">Coordinated payment records, order fulfilment, and delivery.</p>
+                    <p style="font-size: 0.9rem; font-weight: 500;">Coordinated payments, fulfillment, and delivery.</p>
                 </div>
                 <div class="feature-card" style="text-align: center; padding: 1.25rem;">
                     <div class="feature-icon" style="color: var(--accent-blue); margin: 0 auto 1rem auto; background: rgba(99,102,241,0.1); width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i data-lucide="bar-chart-2"></i></div>
                     <p style="font-size: 0.9rem; font-weight: 500;">Provided updated reports for management.</p>
                 </div>
             </div>
-            <div style="background: rgba(16,185,129,0.05); border: 1px solid rgba(16,185,129,0.2); border-radius: 12px; padding: 1rem; text-align: center;">
-                <p style="font-size: 1.1rem; color: var(--accent-green); font-weight: 600;"><i data-lucide="check-circle" style="display: inline; vertical-align: text-bottom; margin-right: 0.25rem;"></i> The project achieved its objectives within the defined study scope.</p>
+            <div style="background: rgba(16,185,129,0.05); border: 1px solid rgba(16,185,129,0.2); border-radius: 12px; padding: 1.5rem; text-align: center;">
+                <p style="font-size: 1.3rem; color: var(--accent-green); font-weight: 600;"><i data-lucide="check-circle" style="display: inline; vertical-align: text-bottom; margin-right: 0.25rem;"></i> The project achieved all its objectives within the defined scope.</p>
             </div>
-            <div style="text-align: center; margin-top: 1rem; border-top: 1px solid var(--border-color); padding-top: 2rem;">
-                <h2 style="font-size: 2rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Live System Demonstration</h2>
-                <p style="font-size: 1.1rem; color: var(--text-secondary);">Registration, book search, online ordering, payment, delivery, and reports.</p>
+        </div>`
+    },
+    {
+        eyebrow: "SLIDE 12 — ONE SCENARIO PRACTICAL",
+        title: "Live System Demonstration",
+        subtitle: "Experience the system workflow from registration to delivery and reporting.",
+        html: `<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; gap: 3rem; text-align: center; padding: 2rem;">
+            <div style="width: 120px; height: 120px; background: rgba(99, 102, 241, 0.1); color: var(--accent-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                <i data-lucide="play-circle" style="width: 64px; height: 64px;"></i>
             </div>
+            <div>
+                <h3 style="font-size: 2rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1rem;">Let's see it in action</h3>
+                <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto;">We will now demonstrate a practical scenario showing how a customer interacts with the system, and how the staff manages the operations in the background.</p>
+            </div>
+            <button onclick="document.querySelector('[data-target=\'overview\']').click()" class="primary-btn" style="font-size: 1.2rem; padding: 1rem 3rem; margin-top: 1rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; background: var(--accent-blue); color: white; border: none; border-radius: 8px; font-weight: 600; box-shadow: 0 4px 15px rgba(99,102,241,0.4);">
+                Start Practical Scenario <i data-lucide="arrow-right"></i>
+            </button>
         </div>`
     }
 ];
-
 """
     new_content = slides_content + content[app_logic_index:]
     

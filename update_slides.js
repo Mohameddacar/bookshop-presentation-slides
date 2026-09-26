@@ -1,9 +1,11 @@
-const SLIDES = [
+const fs = require('fs');
+
+const SLIDES = `const SLIDES = [
     {
         eyebrow: "SLIDE 1 — INTRODUCTION",
         title: "ONLINE BOOKSHOP SYSTEM",
         subtitle: "A web-based platform for managing books, inventory, sales, online orders, payments, deliveries, and reports.",
-        html: `<div class="feature-grid" style="grid-template-columns: 1fr; text-align: center;">
+        html: \\\`<div class="feature-grid" style="grid-template-columns: 1fr; text-align: center;">
                   <div class="feature-card" style="border-top: 4px solid var(--accent-blue); padding: 3rem 2rem;">
                       <div style="margin-bottom: 1rem;">
                           <span style="display: inline-block; padding: 0.5rem 1.5rem; background: rgba(99,102,241,0.1); color: var(--accent-blue); border-radius: 20px; font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2rem;">Faculty of Computing and Informatics</span>
@@ -18,13 +20,13 @@ const SLIDES = [
                           <strong style="color: var(--accent-blue); font-size: 1.1rem;">Bright Multiservices and Tech Solutions</strong>
                       </div>
                   </div>
-               </div>`
+               </div>\\\`
     },
     {
         eyebrow: "SLIDE 2 — PROJECT TEAM",
         title: "Project Team",
         subtitle: "The research and development team for the Online Bookshop System.",
-        html: `<div style="display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; align-items: stretch; width: 100%;">
+        html: \\\`<div style="display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; align-items: stretch; width: 100%;">
             <!-- Left Side: Supervisor -->
             <div class="feature-card" style="border-top: 4px solid #f59e0b; text-align: center; padding: 3rem 2rem; background: var(--bg-primary); box-shadow: 0 10px 30px rgba(0,0,0,0.06); border-radius: 16px; display: flex; flex-direction: column; justify-content: center;">
                 <div style="width: 100px; height: 100px; background: linear-gradient(135deg, #f59e0b, #d97706); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto; font-size: 2.5rem; font-weight: 800; box-shadow: 0 8px 20px rgba(245, 158, 11, 0.4); border: 5px solid var(--bg-primary);">AM</div>
@@ -59,13 +61,13 @@ const SLIDES = [
                     </div>
                 </div>
             </div>
-        </div>`
+        </div>\\\`
     },
     {
         eyebrow: "SLIDE 3 — BACKGROUND AND PROBLEM STATEMENT",
         title: "Background and Problem Statement",
         subtitle: "Bright Multiservices and Tech Solutions distributes educational book series to schools, organizations, bookstores, and individual customers.",
-        html: `<div style="display: flex; flex-direction: column; gap: 2rem;">
+        html: \\\`<div style="display: flex; flex-direction: column; gap: 2rem;">
             <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.5rem; text-align: center;">
                 <p style="font-size: 1.1rem; color: var(--text-primary);">Before the project, the company used handwritten records and separate spreadsheets.</p>
             </div>
@@ -95,13 +97,13 @@ const SLIDES = [
                 <h4 style="color: var(--accent-blue); font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: 700;">Problem Statement</h4>
                 <p style="font-size: 1.15rem; color: var(--text-primary); font-weight: 500;">The reliance on manual, disconnected processes results in operational inefficiencies, data loss, delayed reporting, and poor customer experience.</p>
             </div>
-        </div>`
+        </div>\\\`
     },
     {
         eyebrow: "SLIDE 4 — PROJECT SOLUTION",
         title: "Project Solution",
         subtitle: "A unified, web-based platform to centralize and automate operations.",
-        html: `<div class="feature-grid" style="grid-template-columns: 1fr 1fr; gap: 2rem;">
+        html: \\\`<div class="feature-grid" style="grid-template-columns: 1fr 1fr; gap: 2rem;">
             <div class="feature-card" style="border-top: 4px solid var(--accent-green); padding: 2.5rem;">
                 <div class="feature-icon" style="color: var(--accent-green); background: rgba(16, 185, 129, 0.1); transform: scale(1.2); margin-bottom: 1.5rem;"><i data-lucide="globe"></i></div>
                 <h3 style="font-size: 1.5rem; margin-bottom: 1rem; font-weight: 800;">Web-Based Integration</h3>
@@ -119,13 +121,13 @@ const SLIDES = [
                     <p style="font-size: 1.1rem; color: var(--text-secondary);">Providing management with instantly updated analytics on revenue, popular books, and inventory shortages.</p>
                 </div>
             </div>
-        </div>`
+        </div>\\\`
     },
     {
         eyebrow: "SLIDE 5 — RESEARCH OBJECTIVES",
         title: "Research Objectives",
         subtitle: "General Objective: To design and develop a web-based Online Bookshop System that improves inventory management, automates sales operations, and supports business decision-making.",
-        html: `<div class="feature-grid" style="grid-template-columns: repeat(3, 1fr); margin-top: 2rem;">
+        html: \\\`<div class="feature-grid" style="grid-template-columns: repeat(3, 1fr); margin-top: 2rem;">
             <div class="feature-card" style="border-top: 4px solid var(--accent-blue); padding: 2rem;">
                 <div style="font-size: 3rem; font-weight: 800; color: rgba(99,102,241,0.2); margin-bottom: 1rem; line-height: 1;">01</div>
                 <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--text-primary);">Implement Core Modules</h3>
@@ -141,13 +143,13 @@ const SLIDES = [
                 <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--text-primary);">Generate Reports</h3>
                 <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.6;">Generate updated reports for inventory, sales, customers, payments, deliveries, and business performance.</p>
             </div>
-        </div>`
+        </div>\\\`
     },
     {
         eyebrow: "SLIDE 6 — SYSTEM SCOPE",
         title: "System Scope",
         subtitle: "The system provides a comprehensive cycle of integrated operations.",
-        html: `<div class="workflow-track" style="margin-bottom: 3rem;">
+        html: \\\`<div class="workflow-track" style="margin-bottom: 3rem;">
             <div class="workflow-line"></div>
             <div class="workflow-node active" style="border-color: var(--accent-blue);"><i data-lucide="library" style="color: var(--accent-blue);"></i><span class="workflow-label">Catalog</span></div>
             <div class="workflow-node active" style="border-color: var(--accent-blue);"><i data-lucide="archive" style="color: var(--accent-blue);"></i><span class="workflow-label">Inventory</span></div>
@@ -181,13 +183,13 @@ const SLIDES = [
                 <h3 style="font-size: 1.1rem; color: var(--accent-blue); margin-bottom: 0.5rem;"><i data-lucide="settings" style="width: 18px; height: 18px; display: inline; vertical-align: text-bottom; margin-right: 0.25rem;"></i> Administration & Reports</h3>
                 <p style="font-size: 0.95rem;">Users, roles, permissions, dashboards, and business reports.</p>
             </div>
-        </div>`
+        </div>\\\`
     },
     {
         eyebrow: "SLIDE 7 — METHODOLOGY AND TECH USED",
         title: "Methodology and Tech Used",
         subtitle: "Rapid Application Development (RAD) approach allowed for fast prototyping and iterative feedback.",
-        html: `<div style="display: flex; flex-direction: column; gap: 2rem;">
+        html: \\\`<div style="display: flex; flex-direction: column; gap: 2rem;">
             <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.5rem; text-align: center;">
                 <div class="workflow-track" style="margin-bottom: 0;">
                     <div class="workflow-line"></div>
@@ -222,13 +224,13 @@ const SLIDES = [
                     </div>
                 </div>
             </div>
-        </div>`
+        </div>\\\`
     },
     {
         eyebrow: "SLIDE 8 — SYSTEM ARCHITECTURE",
         title: "System Architecture",
         subtitle: "A modern multi-tier architecture ensuring scalability, security, and performance.",
-        html: `<div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
+        html: \\\`<div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
             
             <!-- Client Layer -->
             <div style="width: 100%; max-width: 800px; border: 2px dashed var(--accent-blue); padding: 1.5rem; border-radius: 12px; position: relative; background: rgba(99,102,241,0.03);">
@@ -264,13 +266,13 @@ const SLIDES = [
                 </div>
             </div>
 
-        </div>`
+        </div>\\\`
     },
     {
         eyebrow: "SLIDE 9 — SYSTEM USERS",
         title: "System Users",
         subtitle: "Role-Based Access Control tailors the experience to specific actors.",
-        html: `<div class="feature-grid" style="grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 2rem;">
+        html: \\\`<div class="feature-grid" style="grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 2rem;">
             <div class="feature-card" style="text-align: center; padding: 2rem 1.5rem; border-top: 4px solid var(--accent-blue);">
                 <div class="feature-icon" style="color: var(--accent-blue); background: rgba(99,102,241,0.1); margin: 0 auto 1.5rem auto; transform: scale(1.2);"><i data-lucide="shield"></i></div>
                 <h3 style="font-size: 1.3rem; margin-bottom: 1rem; font-weight: 800;">Administrator</h3>
@@ -291,13 +293,13 @@ const SLIDES = [
                 <h3 style="font-size: 1.3rem; margin-bottom: 1rem; font-weight: 800;">Online Customer</h3>
                 <p style="font-size: 0.95rem; color: var(--text-secondary);">Public storefront access to browse books, place orders, and track history.</p>
             </div>
-        </div>`
+        </div>\\\`
     },
     {
         eyebrow: "SLIDE 10 — RESULT AND IMPLEMENTATIONS",
         title: "Result and Implementations",
         subtitle: "The system successfully connects all primary workflows into one seamless platform.",
-        html: `<div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 2rem; align-items: center;">
+        html: \\\`<div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 2rem; align-items: center;">
             <div style="background: #fff; border: 1px solid var(--border-color); border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); overflow: hidden; display: flex; flex-direction: column;">
                 <div style="background: var(--bg-secondary); padding: 0.75rem 1rem; border-bottom: 1px solid var(--border-color); display: flex; align-items: center; gap: 0.5rem;">
                     <div style="width: 12px; height: 12px; background: #ef4444; border-radius: 50%;"></div>
@@ -347,13 +349,13 @@ const SLIDES = [
                     </div>
                 </div>
             </div>
-        </div>`
+        </div>\\\`
     },
     {
         eyebrow: "SLIDE 11 — CONCLUSION",
         title: "Conclusion",
         subtitle: "The Online Bookshop System successfully transitions BrightMTS to a digital-first operation.",
-        html: `<div style="display: flex; flex-direction: column; gap: 2rem;">
+        html: \\\`<div style="display: flex; flex-direction: column; gap: 2rem;">
             <div class="feature-grid" style="grid-template-columns: repeat(5, 1fr); margin-bottom: 1rem;">
                 <div class="feature-card" style="text-align: center; padding: 1.25rem;">
                     <div class="feature-icon" style="color: var(--accent-blue); margin: 0 auto 1rem auto; background: rgba(99,102,241,0.1); width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i data-lucide="folder"></i></div>
@@ -379,13 +381,13 @@ const SLIDES = [
             <div style="background: rgba(16,185,129,0.05); border: 1px solid rgba(16,185,129,0.2); border-radius: 12px; padding: 1.5rem; text-align: center;">
                 <p style="font-size: 1.3rem; color: var(--accent-green); font-weight: 600;"><i data-lucide="check-circle" style="display: inline; vertical-align: text-bottom; margin-right: 0.25rem;"></i> The project achieved all its objectives within the defined scope.</p>
             </div>
-        </div>`
+        </div>\\\`
     },
     {
         eyebrow: "SLIDE 12 — ONE SCENARIO PRACTICAL",
         title: "Live System Demonstration",
         subtitle: "Experience the system workflow from registration to delivery and reporting.",
-        html: `<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; gap: 3rem; text-align: center; padding: 2rem;">
+        html: \\\`<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; gap: 3rem; text-align: center; padding: 2rem;">
             <div style="width: 120px; height: 120px; background: rgba(99, 102, 241, 0.1); color: var(--accent-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
                 <i data-lucide="play-circle" style="width: 64px; height: 64px;"></i>
             </div>
@@ -393,244 +395,32 @@ const SLIDES = [
                 <h3 style="font-size: 2rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1rem;">Let's see it in action</h3>
                 <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto;">We will now demonstrate a practical scenario showing how a customer interacts with the system, and how the staff manages the operations in the background.</p>
             </div>
-            <button onclick="document.querySelector('[data-target=\'overview\']').click()" class="primary-btn" style="font-size: 1.2rem; padding: 1rem 3rem; margin-top: 1rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; background: var(--accent-blue); color: white; border: none; border-radius: 8px; font-weight: 600; box-shadow: 0 4px 15px rgba(99,102,241,0.4);">
+            <button onclick="document.querySelector('[data-target=\\\'overview\\\']').click()" class="primary-btn" style="font-size: 1.2rem; padding: 1rem 3rem; margin-top: 1rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; background: var(--accent-blue); color: white; border: none; border-radius: 8px; font-weight: 600; box-shadow: 0 4px 15px rgba(99,102,241,0.4);">
                 Start Practical Scenario <i data-lucide="arrow-right"></i>
             </button>
-        </div>`
+        </div>\\\`
     }
-];
+];`;
 
-// App Logic
-let currentSlideIndex = 0;
-const totalSlides = SLIDES.length;
+const scriptsPath = 'd:/graduation/presentation/csjs/scripts.js';
+const updatePath = 'd:/graduation/presentation/update.py';
 
-const slideContainer = document.getElementById('slide-container');
-const prevBtn = document.getElementById('prev-btn');
-const nextBtn = document.getElementById('next-btn');
-const currentSlideEl = document.getElementById('current-slide');
-const totalSlidesEl = document.getElementById('total-slides');
-const progressBar = document.getElementById('progress-bar');
-const slideControls = document.getElementById('slide-controls');
-const headerTitle = document.getElementById('header-title');
-
-totalSlidesEl.textContent = totalSlides;
-
-function renderSlide(index) {
-  const slide = SLIDES[index];
-
-  // Update Header
-  headerTitle.textContent = slide.eyebrow.split(':')[0]; // e.g. "Slide 1"
-
-  // Inject Slide Content
-  slideContainer.innerHTML = `
-        <div class="slide-content">
-            <div class="slide-eyebrow">${slide.eyebrow}</div>
-            <h1 class="slide-title">${slide.title}</h1>
-            <p class="slide-subtitle">${slide.subtitle}</p>
-            <div class="slide-html-content">${slide.html}</div>
-        </div>
-    `;
-
-  // Update Icons
-  lucide.createIcons();
-
-  // Update Footer Controls
-  currentSlideEl.textContent = index + 1;
-  progressBar.style.width = `${((index + 1) / totalSlides) * 100}%`;
-
-  prevBtn.disabled = index === 0;
-
-  if (index === totalSlides - 1) {
-    nextBtn.innerHTML = 'Finish <i data-lucide="check"></i>';
-    nextBtn.classList.remove('primary-btn');
-    nextBtn.style.background = 'var(--accent-green)';
-    nextBtn.style.color = 'white';
-    nextBtn.style.border = 'none';
-  } else {
-    nextBtn.innerHTML = 'Next <i data-lucide="chevron-right"></i>';
-    nextBtn.classList.add('primary-btn');
-    nextBtn.style.background = '';
-  }
-  lucide.createIcons();
+// Update scripts.js
+let scriptsContent = fs.readFileSync(scriptsPath, 'utf8');
+const appLogicIndex = scriptsContent.indexOf('// App Logic');
+if (appLogicIndex !== -1) {
+    scriptsContent = SLIDES + '\n\n' + scriptsContent.substring(appLogicIndex);
+    fs.writeFileSync(scriptsPath, scriptsContent, 'utf8');
+    console.log('Updated scripts.js');
 }
 
-// Event Listeners for Controls
-prevBtn.addEventListener('click', () => {
-  if (currentSlideIndex > 0) {
-    currentSlideIndex--;
-    renderSlide(currentSlideIndex);
-  }
-});
-
-nextBtn.addEventListener('click', () => {
-  if (currentSlideIndex < totalSlides - 1) {
-    currentSlideIndex++;
-    renderSlide(currentSlideIndex);
-  }
-});
-
-// Keyboard Navigation
-document.addEventListener('keydown', (e) => {
-  if (!document.getElementById('slides-view').classList.contains('active')) return;
-
-  if (e.key === 'ArrowRight' || e.key === 'Space') {
-    nextBtn.click();
-  } else if (e.key === 'ArrowLeft') {
-    prevBtn.click();
-  }
-});
-
-// Sidebar Navigation Logic
-const navItems = document.querySelectorAll('.nav-item');
-const views = document.querySelectorAll('.view-section');
-
-navItems.forEach(item => {
-  item.addEventListener('click', (e) => {
-    e.preventDefault();
-    const target = e.currentTarget.getAttribute('data-target');
-
-    // Update active nav state
-    navItems.forEach(nav => nav.classList.remove('active'));
-    e.currentTarget.classList.add('active');
-
-    // Update view sections
-    views.forEach(view => {
-      view.classList.remove('active');
-      view.style.display = 'none';
-    });
-
-    const activeView = document.getElementById(`${target}-view`);
-    if (activeView) {
-        activeView.style.display = 'block';
-        // Force reflow for animation
-        void activeView.offsetWidth;
-        activeView.classList.add('active');
-    }
-
-    // Update Header Title and slide controls
-    if (target === 'slides') {
-      slideControls.style.display = 'flex';
-      renderSlide(currentSlideIndex);
-    } else {
-      slideControls.style.display = 'none';
-      headerTitle.textContent = target === 'overview' ? 'System Overview' : 'Premium Analytics Dashboard';
-    }
-
-    // Render chart if reports selected
-    if (target === 'reports') renderChart();
-  });
-});
-
-// Timer Logic
-let seconds = 0;
-setInterval(() => {
-  seconds++;
-  const mins = Math.floor(seconds / 60).toString().padStart(2, '0');
-  const secs = (seconds % 60).toString().padStart(2, '0');
-  const timerSpan = document.querySelector('#presentation-timer span');
-  if (timerSpan) timerSpan.textContent = `${mins}:${secs}`;
-}, 1000);
-
-// Initialize First Slide on Load
-renderSlide(0);
-
-// Premium Dashboard Chart Rendering
-let lineChart, doughnutChart;
-function renderChart() {
-  if (typeof Chart === 'undefined') return;
-
-  Chart.defaults.color = '#64748b';
-  Chart.defaults.font.family = 'Inter';
-  Chart.defaults.plugins.tooltip.backgroundColor = '#1e293b';
-  Chart.defaults.plugins.tooltip.padding = 12;
-  Chart.defaults.plugins.tooltip.borderColor = '#e2e8f0';
-  Chart.defaults.plugins.tooltip.borderWidth = 1;
-
-  const ctxLine = document.getElementById('salesLineChart')?.getContext('2d');
-  const ctxDoughnut = document.getElementById('categoryDoughnutChart')?.getContext('2d');
-  
-  if (!ctxLine || !ctxDoughnut) return;
-
-  if (lineChart) lineChart.destroy();
-  if (doughnutChart) doughnutChart.destroy();
-
-  // Line Chart
-  lineChart = new Chart(ctxLine, {
-    type: 'line',
-    data: {
-      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-      datasets: [
-        {
-          label: 'Revenue',
-          data: [12000, 19000, 15000, 22000, 28000, 34000],
-          borderColor: '#6366f1',
-          backgroundColor: 'rgba(99, 102, 241, 0.1)',
-          borderWidth: 3,
-          fill: true,
-          tension: 0.4,
-          pointBackgroundColor: '#fff',
-          pointBorderColor: '#6366f1',
-          pointRadius: 4,
-          pointHoverRadius: 6
-        }
-      ]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      plugins: { legend: { display: false } },
-      scales: {
-        y: { grid: { color: 'rgba(0,0,0,0.05)' }, ticks: { callback: v => '$' + v / 1000 + 'k' } },
-        x: { grid: { display: false } }
-      },
-      animation: { duration: 1500, easing: 'easeOutQuart' }
-    }
-  });
-
-  // Doughnut Chart
-  doughnutChart = new Chart(ctxDoughnut, {
-    type: 'doughnut',
-    data: {
-      labels: ['Fiction', 'Non-Fiction', 'Academic', 'Comics'],
-      datasets: [{
-        data: [45, 25, 20, 10],
-        backgroundColor: ['#6366f1', '#14b8a6', '#f59e0b', '#8b5cf6'],
-        borderWidth: 0,
-        hoverOffset: 4
-      }]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      plugins: {
-        legend: { position: 'bottom', labels: { padding: 20, usePointStyle: true, pointStyle: 'circle' } }
-      },
-      cutout: '75%',
-      animation: { animateScale: true, animateRotate: true, duration: 1500 }
-    }
-  });
+// Update update.py
+let updateContent = fs.readFileSync(updatePath, 'utf8');
+const slidesContentIndex = updateContent.indexOf('const SLIDES = [');
+const pyAppLogicIndex = updateContent.indexOf('// App Logic');
+if (slidesContentIndex !== -1 && pyAppLogicIndex !== -1) {
+    updateContent = updateContent.substring(0, slidesContentIndex) + SLIDES + '\\n"""\n    new_content = slides_content + content[app_logic_index:]' + updateContent.substring(updateContent.indexOf('    new_content = slides_content + content[app_logic_index:]') + 60);
+    // Actually, writing python string escaping is hard via script. I will just run a python script to do it.
+    console.log('Use python script for update.py instead, it is safer for escaping.');
 }
 
-// Filter Dropdown Animation
-document.getElementById('report-filter')?.addEventListener('change', (e) => {
-  if (lineChart) {
-    lineChart.data.datasets[0].data = Array.from({ length: 6 }, () => Math.floor(Math.random() * 40000) + 10000);
-    lineChart.update();
-  }
-  const kpis = [
-    { id: 'kpi-revenue', val: Math.floor(Math.random() * 200000) + 50000, format: v => '$' + v.toLocaleString() },
-    { id: 'kpi-orders', val: Math.floor(Math.random() * 5000) + 1000, format: v => v.toLocaleString() },
-    { id: 'kpi-customers', val: Math.floor(Math.random() * 2000) + 500, format: v => v.toLocaleString() }
-  ];
-  kpis.forEach(kpi => {
-    const el = document.getElementById(kpi.id);
-    if (el) {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(10px)';
-      setTimeout(() => {
-        el.textContent = kpi.format(kpi.val);
-        el.style.transition = 'all 0.5s';
-        el.style.opacity = '1';
-        el.style.transform = 'translateY(0)';
-      }, 300);
-    }
-  });
-});
